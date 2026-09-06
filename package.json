@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/Migueks/vulntrack-api/issues"
   },
-  "homepage": "https://github.com/Migueks/vulntrack-api#readme"
+  "homepage": "https://github.com/Migueks/vulntrack-api#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }
