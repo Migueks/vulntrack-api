@@ -1,0 +1,50 @@
+// Estados posibles durante el ciclo de vida de un hallazgo.
+const FINDING_STATUSES = {
+  OPEN: "OPEN",
+  IN_PROGRESS: "IN_PROGRESS",
+  MITIGATED: "MITIGATED",
+  RESOLVED: "RESOLVED",
+  ACCEPTED_RISK: "ACCEPTED_RISK",
+  FALSE_POSITIVE: "FALSE_POSITIVE",
+};
+
+// Prioridad empresarial calculada según vulnerabilidad y criticidad del activo.
+const FINDING_PRIORITIES = {
+  P1: "P1",
+  P2: "P2",
+  P3: "P3",
+  P4: "P4",
+};
+
+// Acciones que pueden registrarse en el historial de un hallazgo.
+const FINDING_HISTORY_ACTIONS = {
+  CREATED: "CREATED",
+  ASSIGNED: "ASSIGNED",
+  UNASSIGNED: "UNASSIGNED",
+  STATUS_CHANGED: "STATUS_CHANGED",
+  EVIDENCE_ADDED: "EVIDENCE_ADDED",
+  EVIDENCE_REMOVED: "EVIDENCE_REMOVED",
+  NOTE_ADDED: "NOTE_ADDED",
+};
+
+// Estados que consideramos cerrados.
+const CLOSED_FINDING_STATUSES = [
+  FINDING_STATUSES.RESOLVED,
+  FINDING_STATUSES.ACCEPTED_RISK,
+  FINDING_STATUSES.FALSE_POSITIVE,
+];
+
+// Arrays reutilizables para enums de Mongoose y futuras validaciones.
+const FINDING_STATUS_VALUES = Object.values(FINDING_STATUSES);
+const FINDING_PRIORITY_VALUES = Object.values(FINDING_PRIORITIES);
+const FINDING_HISTORY_ACTION_VALUES = Object.values(FINDING_HISTORY_ACTIONS);
+
+module.exports = {
+  FINDING_STATUSES,
+  FINDING_PRIORITIES,
+  FINDING_HISTORY_ACTIONS,
+  CLOSED_FINDING_STATUSES,
+  FINDING_STATUS_VALUES,
+  FINDING_PRIORITY_VALUES,
+  FINDING_HISTORY_ACTION_VALUES,
+};
