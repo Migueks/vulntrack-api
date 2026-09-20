@@ -1,0 +1,13 @@
+userCode,name,email,role,isActive
+USR-001,Miguel López,miguel.lopez@vulntrack.demo,ADMIN,TRUE
+USR-002,Daniel Ruiz,daniel.ruiz@vulntrack.demo,ANALYST,TRUE
+USR-003,Ana Torres,ana.torres@vulntrack.demo,ANALYST,TRUE
+USR-004,Carlos Medina,carlos.medina@vulntrack.demo,ANALYST,TRUE
+USR-005,Sofía Navarro,sofia.navarro@vulntrack.demo,ANALYST,TRUE
+USR-006,Javier Romero,javier.romero@vulntrack.demo,ANALYST,TRUE
+USR-007,Elena Castro,elena.castro@vulntrack.demo,ANALYST,TRUE
+USR-008,Álvaro Sánchez,alvaro.sanchez@vulntrack.demo,ANALYST,TRUE
+USR-009,Marta Vega,marta.vega@vulntrack.demo,ANALYST,TRUE
+USR-010,Pablo Ortega,pablo.ortega@vulntrack.demo,VIEWER,TRUE
+USR-011,Lucía Herrera,lucia.herrera@vulntrack.demo,VIEWER,TRUE
+USR-012,Marcos Gil,marcos.gil@vulntrack.demo,VIEWER,FALSE

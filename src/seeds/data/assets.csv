@@ -1,0 +1,121 @@
+assetCode,name,type,hostname,ipAddress,operatingSystem,environment,criticality,department,status,description,createdByCode
+AST-001,Production Web Server 01,SERVER,srv-web-01,10.20.1.11,Ubuntu Server 24.04,PRODUCTION,CRITICAL,IT,ACTIVE,Primary production web server.,USR-001
+AST-002,Production Web Server 02,SERVER,srv-web-02,10.20.1.12,Ubuntu Server 24.04,PRODUCTION,HIGH,IT,ACTIVE,Secondary production web server.,USR-002
+AST-003,Production API Server 01,SERVER,srv-api-01,10.20.1.21,Ubuntu Server 24.04,PRODUCTION,CRITICAL,Engineering,ACTIVE,Hosts the main production API.,USR-003
+AST-004,Production API Server 02,SERVER,srv-api-02,10.20.1.22,Ubuntu Server 24.04,PRODUCTION,HIGH,Engineering,ACTIVE,Secondary API server for production traffic.,USR-004
+AST-005,Authentication Server,SERVER,srv-auth-01,10.20.2.10,Windows Server 2022,PRODUCTION,CRITICAL,IT,ACTIVE,Central authentication services server.,USR-005
+AST-006,File Server,SERVER,srv-file-01,10.20.2.20,Windows Server 2022,PRODUCTION,HIGH,Operations,ACTIVE,Corporate file storage server.,USR-006
+AST-007,Backup Server,SERVER,srv-backup-01,10.20.2.30,Debian 12,PRODUCTION,CRITICAL,IT,ACTIVE,Centralized backup management server.,USR-007
+AST-008,Monitoring Server,SERVER,srv-mon-01,10.20.2.40,Rocky Linux 9,PRODUCTION,HIGH,Security,ACTIVE,Infrastructure monitoring and alerting server.,USR-008
+AST-009,SIEM Server,SERVER,srv-siem-01,10.20.2.50,RHEL 9,PRODUCTION,CRITICAL,Security,ACTIVE,Security event collection and correlation server.,USR-009
+AST-010,Log Server,SERVER,srv-log-01,10.20.2.60,Ubuntu Server 24.04,PRODUCTION,HIGH,Security,ACTIVE,Centralized application and infrastructure logs.,USR-001
+AST-011,Mail Server,SERVER,srv-mail-01,10.20.3.10,Ubuntu Server 24.04,PRODUCTION,HIGH,Operations,ACTIVE,Internal mail relay and notification server.,USR-002
+AST-012,DNS Server 01,SERVER,srv-dns-01,10.20.3.20,Debian 12,PRODUCTION,CRITICAL,IT,ACTIVE,Primary internal DNS server.,USR-003
+AST-013,DNS Server 02,SERVER,srv-dns-02,10.20.3.21,Debian 12,PRODUCTION,HIGH,IT,ACTIVE,Secondary internal DNS server.,USR-004
+AST-014,Dev Build Server,SERVER,srv-build-01,10.30.1.10,Ubuntu Server 24.04,DEVELOPMENT,MEDIUM,Engineering,ACTIVE,Build and continuous integration workloads.,USR-005
+AST-015,Dev API Server,SERVER,srv-dev-api-01,10.30.1.20,Ubuntu Server 24.04,DEVELOPMENT,MEDIUM,Engineering,ACTIVE,Development API environment.,USR-006
+AST-016,Dev Web Server,SERVER,srv-dev-web-01,10.30.1.30,Ubuntu Server 24.04,DEVELOPMENT,LOW,Engineering,ACTIVE,Development web environment.,USR-007
+AST-017,QA Server 01,SERVER,srv-qa-01,10.25.1.10,Ubuntu Server 24.04,PREPRODUCTION,MEDIUM,QA,ACTIVE,Quality assurance application server.,USR-008
+AST-018,QA Server 02,SERVER,srv-qa-02,10.25.1.11,Ubuntu Server 24.04,PREPRODUCTION,MEDIUM,QA,ACTIVE,Secondary quality assurance server.,USR-009
+AST-019,Staging Web Server,SERVER,srv-stage-web-01,10.25.1.20,Ubuntu Server 24.04,PREPRODUCTION,HIGH,Engineering,ACTIVE,Staging environment for web releases.,USR-001
+AST-020,Staging API Server,SERVER,srv-stage-api-01,10.25.1.21,Ubuntu Server 24.04,PREPRODUCTION,HIGH,Engineering,ACTIVE,Staging environment for API releases.,USR-002
+AST-021,HR Application Server,SERVER,srv-hr-01,10.20.4.10,Windows Server 2022,PRODUCTION,HIGH,HR,ACTIVE,Hosts internal human resources applications.,USR-003
+AST-022,Finance Application Server,SERVER,srv-fin-01,10.20.4.20,Windows Server 2022,PRODUCTION,CRITICAL,Finance,ACTIVE,Hosts internal finance applications.,USR-004
+AST-023,ERP Server,SERVER,srv-erp-01,10.20.4.30,RHEL 9,PRODUCTION,CRITICAL,Operations,ACTIVE,Enterprise resource planning server.,USR-005
+AST-024,Print Server,SERVER,srv-print-01,10.20.4.40,Windows Server 2022,PRODUCTION,LOW,Operations,INACTIVE,Legacy centralized print server.,USR-006
+AST-025,Legacy Web Server,SERVER,srv-legacy-web-01,10.20.5.10,Ubuntu Server 20.04,PRODUCTION,HIGH,IT,DECOMMISSIONED,Retired legacy web server retained for historical records.,USR-007
+AST-026,Patch Management Server,SERVER,srv-patch-01,10.20.5.20,Windows Server 2022,PRODUCTION,HIGH,Security,ACTIVE,Centralized operating system patch management server.,USR-008
+AST-027,Automation Server,SERVER,srv-auto-01,10.20.5.30,Rocky Linux 9,PRODUCTION,MEDIUM,IT,ACTIVE,Runs infrastructure automation tasks.,USR-009
+AST-028,Reporting Server,SERVER,srv-report-01,10.20.5.40,Windows Server 2022,PRODUCTION,MEDIUM,Finance,ACTIVE,Generates corporate reporting workloads.,USR-001
+AST-029,Training Server,SERVER,srv-training-01,10.30.2.10,Ubuntu Server 24.04,DEVELOPMENT,LOW,Training,INACTIVE,Internal technical training environment.,USR-002
+AST-030,Security Lab Server,SERVER,srv-seclab-01,10.30.2.20,Kali Linux,DEVELOPMENT,MEDIUM,Security,ACTIVE,Controlled security testing laboratory server.,USR-003
+AST-031,Engineering Workstation 01,WORKSTATION,ws-engineering-01,10.40.1.10,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-004
+AST-032,Engineering Workstation 02,WORKSTATION,ws-engineering-02,10.40.1.11,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-005
+AST-033,Engineering Workstation 03,WORKSTATION,ws-engineering-03,10.40.1.12,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-006
+AST-034,Engineering Workstation 04,WORKSTATION,ws-engineering-04,10.40.1.13,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-007
+AST-035,Engineering Workstation 05,WORKSTATION,ws-engineering-05,10.40.1.14,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-008
+AST-036,Engineering Workstation 06,WORKSTATION,ws-engineering-06,10.40.1.15,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-009
+AST-037,Engineering Workstation 07,WORKSTATION,ws-engineering-07,10.40.1.16,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-001
+AST-038,Engineering Workstation 08,WORKSTATION,ws-engineering-08,10.40.1.17,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-002
+AST-039,Engineering Workstation 09,WORKSTATION,ws-engineering-09,10.40.1.18,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-003
+AST-040,Engineering Workstation 10,WORKSTATION,ws-engineering-10,10.40.1.19,Windows 11 Pro,PRODUCTION,MEDIUM,Engineering,ACTIVE,Corporate workstation assigned to the Engineering department.,USR-004
+AST-041,Finance Workstation 11,WORKSTATION,ws-finance-11,10.40.1.20,Windows 11 Pro,PRODUCTION,HIGH,Finance,ACTIVE,Corporate workstation assigned to the Finance department.,USR-005
+AST-042,Finance Workstation 12,WORKSTATION,ws-finance-12,10.40.1.21,Windows 11 Pro,PRODUCTION,HIGH,Finance,ACTIVE,Corporate workstation assigned to the Finance department.,USR-006
+AST-043,Finance Workstation 13,WORKSTATION,ws-finance-13,10.40.1.22,Windows 11 Pro,PRODUCTION,HIGH,Finance,ACTIVE,Corporate workstation assigned to the Finance department.,USR-007
+AST-044,Finance Workstation 14,WORKSTATION,ws-finance-14,10.40.1.23,Windows 11 Pro,PRODUCTION,HIGH,Finance,ACTIVE,Corporate workstation assigned to the Finance department.,USR-008
+AST-045,Finance Workstation 15,WORKSTATION,ws-finance-15,10.40.1.24,Windows 11 Pro,PRODUCTION,HIGH,Finance,ACTIVE,Corporate workstation assigned to the Finance department.,USR-009
+AST-046,HR Workstation 16,WORKSTATION,ws-hr-16,10.40.1.25,Windows 11 Pro,PRODUCTION,MEDIUM,HR,ACTIVE,Corporate workstation assigned to the HR department.,USR-001
+AST-047,HR Workstation 17,WORKSTATION,ws-hr-17,10.40.1.26,Windows 11 Pro,PRODUCTION,MEDIUM,HR,ACTIVE,Corporate workstation assigned to the HR department.,USR-002
+AST-048,HR Workstation 18,WORKSTATION,ws-hr-18,10.40.1.27,Windows 11 Pro,PRODUCTION,MEDIUM,HR,ACTIVE,Corporate workstation assigned to the HR department.,USR-003
+AST-049,HR Workstation 19,WORKSTATION,ws-hr-19,10.40.1.28,Windows 11 Pro,PRODUCTION,MEDIUM,HR,ACTIVE,Corporate workstation assigned to the HR department.,USR-004
+AST-050,Security Workstation 20,WORKSTATION,ws-security-20,10.40.1.29,Ubuntu Desktop 24.04,PRODUCTION,HIGH,Security,ACTIVE,Corporate workstation assigned to the Security department.,USR-005
+AST-051,Security Workstation 21,WORKSTATION,ws-security-21,10.40.2.30,Ubuntu Desktop 24.04,PRODUCTION,HIGH,Security,ACTIVE,Corporate workstation assigned to the Security department.,USR-006
+AST-052,Security Workstation 22,WORKSTATION,ws-security-22,10.40.2.31,Ubuntu Desktop 24.04,PRODUCTION,HIGH,Security,ACTIVE,Corporate workstation assigned to the Security department.,USR-007
+AST-053,Design Workstation 23,WORKSTATION,ws-design-23,10.40.2.32,macOS 15,PRODUCTION,MEDIUM,Design,ACTIVE,Corporate workstation assigned to the Design department.,USR-008
+AST-054,Design Workstation 24,WORKSTATION,ws-design-24,10.40.2.33,macOS 15,PRODUCTION,MEDIUM,Design,INACTIVE,Corporate workstation assigned to the Design department.,USR-009
+AST-055,Design Workstation 25,WORKSTATION,ws-design-25,10.40.2.34,macOS 15,PRODUCTION,MEDIUM,Design,DECOMMISSIONED,Corporate workstation assigned to the Design department.,USR-001
+AST-056,Core Router 01,NETWORK,net-core-rtr-01,10.10.0.1,Cisco IOS XE,PRODUCTION,CRITICAL,IT,ACTIVE,Primary corporate core router.,USR-002
+AST-057,Core Router 02,NETWORK,net-core-rtr-02,10.10.0.2,Cisco IOS XE,PRODUCTION,CRITICAL,IT,ACTIVE,Secondary corporate core router.,USR-003
+AST-058,Edge Firewall 01,NETWORK,net-fw-01,10.10.1.1,FortiOS 7.6,PRODUCTION,CRITICAL,Security,ACTIVE,Primary perimeter firewall.,USR-004
+AST-059,Edge Firewall 02,NETWORK,net-fw-02,10.10.1.2,FortiOS 7.6,PRODUCTION,CRITICAL,Security,ACTIVE,Secondary perimeter firewall.,USR-005
+AST-060,Datacenter Switch 01,NETWORK,net-dc-sw-01,10.10.2.11,ArubaOS-CX,PRODUCTION,HIGH,IT,ACTIVE,Primary datacenter access switch.,USR-006
+AST-061,Datacenter Switch 02,NETWORK,net-dc-sw-02,10.10.2.12,ArubaOS-CX,PRODUCTION,HIGH,IT,ACTIVE,Secondary datacenter access switch.,USR-007
+AST-062,Office Switch 01,NETWORK,net-office-sw-01,10.10.3.11,Cisco IOS XE,PRODUCTION,MEDIUM,IT,ACTIVE,Office floor network switch.,USR-008
+AST-063,Office Switch 02,NETWORK,net-office-sw-02,10.10.3.12,Cisco IOS XE,PRODUCTION,MEDIUM,IT,ACTIVE,Office floor network switch.,USR-009
+AST-064,VPN Gateway,NETWORK,net-vpn-01,10.10.4.1,PAN-OS 11.1,PRODUCTION,CRITICAL,Security,ACTIVE,Remote access VPN gateway.,USR-001
+AST-065,Wireless Controller,NETWORK,net-wlc-01,10.10.5.1,ArubaOS,PRODUCTION,HIGH,IT,ACTIVE,Corporate wireless network controller.,USR-002
+AST-066,IDS Sensor 01,NETWORK,net-ids-01,10.10.6.11,Security Appliance OS,PRODUCTION,HIGH,Security,ACTIVE,Network intrusion detection sensor.,USR-003
+AST-067,IDS Sensor 02,NETWORK,net-ids-02,10.10.6.12,Security Appliance OS,PRODUCTION,HIGH,Security,ACTIVE,Secondary intrusion detection sensor.,USR-004
+AST-068,Lab Router,NETWORK,net-lab-rtr-01,10.30.10.1,Junos OS 24,DEVELOPMENT,LOW,Training,ACTIVE,Networking laboratory router.,USR-005
+AST-069,Legacy Office Switch,NETWORK,net-legacy-sw-01,10.10.7.20,Cisco IOS,PRODUCTION,LOW,IT,DECOMMISSIONED,Retired office switch retained for historical data.,USR-006
+AST-070,Preproduction Firewall,NETWORK,net-pre-fw-01,10.25.10.1,FortiOS 7.6,PREPRODUCTION,MEDIUM,Security,ACTIVE,Firewall protecting the preproduction environment.,USR-007
+AST-071,Customer Portal,WEB_APPLICATION,app-customer-portal,10.20.10.11,Linux Container,PRODUCTION,CRITICAL,Product,ACTIVE,Public customer self-service web application.,USR-008
+AST-072,Administration Portal,WEB_APPLICATION,app-admin-portal,10.20.10.12,Linux Container,PRODUCTION,CRITICAL,IT,ACTIVE,Internal administration web application.,USR-009
+AST-073,E-commerce Platform,WEB_APPLICATION,app-ecommerce,10.20.10.13,Linux Container,PRODUCTION,CRITICAL,Sales,ACTIVE,Public online sales platform.,USR-001
+AST-074,Support Portal,WEB_APPLICATION,app-support,10.20.10.14,Linux Container,PRODUCTION,HIGH,Support,ACTIVE,Customer support ticketing web portal.,USR-002
+AST-075,HR Portal,WEB_APPLICATION,app-hr,10.20.10.15,Windows Server 2022,PRODUCTION,HIGH,HR,ACTIVE,Internal human resources portal.,USR-003
+AST-076,Finance Dashboard,WEB_APPLICATION,app-finance,10.20.10.16,Linux Container,PRODUCTION,HIGH,Finance,ACTIVE,Financial reporting and analytics web application.,USR-004
+AST-077,Partner Portal,WEB_APPLICATION,app-partner,10.20.10.17,Linux Container,PRODUCTION,HIGH,Sales,ACTIVE,External partner management portal.,USR-005
+AST-078,Internal Wiki,WEB_APPLICATION,app-wiki,10.20.10.18,Ubuntu Server 24.04,PRODUCTION,MEDIUM,Operations,ACTIVE,Internal knowledge base.,USR-006
+AST-079,Asset Management Portal,WEB_APPLICATION,app-assets,10.20.10.19,Linux Container,PRODUCTION,MEDIUM,IT,ACTIVE,Internal technology asset management application.,USR-007
+AST-080,Security Dashboard,WEB_APPLICATION,app-security,10.20.10.20,Linux Container,PRODUCTION,HIGH,Security,ACTIVE,Internal security operations dashboard.,USR-008
+AST-081,Staging Customer Portal,WEB_APPLICATION,stage-customer-portal,10.25.10.11,Linux Container,PREPRODUCTION,MEDIUM,Product,ACTIVE,Preproduction customer portal.,USR-009
+AST-082,Staging Admin Portal,WEB_APPLICATION,stage-admin-portal,10.25.10.12,Linux Container,PREPRODUCTION,MEDIUM,IT,ACTIVE,Preproduction administration portal.,USR-001
+AST-083,Development Sandbox,WEB_APPLICATION,dev-sandbox,10.30.10.11,Linux Container,DEVELOPMENT,LOW,Engineering,ACTIVE,Shared web development sandbox.,USR-002
+AST-084,Legacy Intranet,WEB_APPLICATION,legacy-intranet,10.20.10.30,Windows Server 2016,PRODUCTION,MEDIUM,Operations,INACTIVE,Legacy internal intranet pending retirement.,USR-003
+AST-085,Retired Campaign Site,WEB_APPLICATION,retired-campaign,,Linux Container,PRODUCTION,LOW,Marketing,DECOMMISSIONED,Retired campaign website kept for historical records.,USR-004
+AST-086,Customer Production Database,DATABASE,db-customer-01,10.20.20.11,Ubuntu Server 24.04,PRODUCTION,CRITICAL,Product,ACTIVE,Primary customer data database server.,USR-005
+AST-087,Orders Production Database,DATABASE,db-orders-01,10.20.20.12,Ubuntu Server 24.04,PRODUCTION,CRITICAL,Sales,ACTIVE,Primary sales order database server.,USR-006
+AST-088,Authentication Database,DATABASE,db-auth-01,10.20.20.13,RHEL 9,PRODUCTION,CRITICAL,Security,ACTIVE,Authentication and identity data store.,USR-007
+AST-089,Finance Database,DATABASE,db-finance-01,10.20.20.14,Windows Server 2022,PRODUCTION,CRITICAL,Finance,ACTIVE,Financial operations database.,USR-008
+AST-090,HR Database,DATABASE,db-hr-01,10.20.20.15,Windows Server 2022,PRODUCTION,HIGH,HR,ACTIVE,Human resources information database.,USR-009
+AST-091,Analytics Database,DATABASE,db-analytics-01,10.20.20.16,Ubuntu Server 24.04,PRODUCTION,HIGH,Data,ACTIVE,Analytics and reporting database.,USR-001
+AST-092,Logging Database,DATABASE,db-logs-01,10.20.20.17,Ubuntu Server 24.04,PRODUCTION,HIGH,Security,ACTIVE,Centralized security log data store.,USR-002
+AST-093,Inventory Database,DATABASE,db-inventory-01,10.20.20.18,Ubuntu Server 24.04,PRODUCTION,HIGH,Operations,ACTIVE,Inventory management database.,USR-003
+AST-094,Support Database,DATABASE,db-support-01,10.20.20.19,Ubuntu Server 24.04,PRODUCTION,MEDIUM,Support,ACTIVE,Customer support data store.,USR-004
+AST-095,CMS Database,DATABASE,db-cms-01,10.20.20.20,Ubuntu Server 24.04,PRODUCTION,MEDIUM,Marketing,ACTIVE,Content management system database.,USR-005
+AST-096,Staging Customer Database,DATABASE,db-stage-customer,10.25.20.11,Ubuntu Server 24.04,PREPRODUCTION,MEDIUM,Product,ACTIVE,Staging customer data store.,USR-006
+AST-097,Staging Orders Database,DATABASE,db-stage-orders,10.25.20.12,Ubuntu Server 24.04,PREPRODUCTION,MEDIUM,Sales,ACTIVE,Staging order data store.,USR-007
+AST-098,Development Database 01,DATABASE,db-dev-01,10.30.20.11,Ubuntu Server 24.04,DEVELOPMENT,LOW,Engineering,ACTIVE,Development database environment.,USR-008
+AST-099,Development Database 02,DATABASE,db-dev-02,10.30.20.12,Ubuntu Server 24.04,DEVELOPMENT,LOW,Engineering,ACTIVE,Secondary development database environment.,USR-009
+AST-100,Legacy Reporting Database,DATABASE,db-legacy-report,10.20.20.30,Windows Server 2016,PRODUCTION,MEDIUM,Finance,DECOMMISSIONED,Retired reporting database retained for historical data.,USR-001
+AST-101,AWS Production VPC,CLOUD,aws-prod-vpc,,Managed Cloud Service,PRODUCTION,CRITICAL,IT,ACTIVE,Primary AWS production virtual network.,USR-002
+AST-102,AWS Production Compute Cluster,CLOUD,aws-prod-compute,,Amazon Linux 2023,PRODUCTION,CRITICAL,Engineering,ACTIVE,Production compute workload cluster.,USR-003
+AST-103,AWS Object Storage,CLOUD,aws-prod-storage,,Managed Cloud Service,PRODUCTION,HIGH,Operations,ACTIVE,Production object storage service.,USR-004
+AST-104,AWS Backup Vault,CLOUD,aws-backup-vault,,Managed Cloud Service,PRODUCTION,CRITICAL,IT,ACTIVE,Centralized cloud backup vault.,USR-005
+AST-105,Azure Identity Tenant,CLOUD,azure-identity,,Managed Cloud Service,PRODUCTION,CRITICAL,Security,ACTIVE,Cloud identity and access management tenant.,USR-006
+AST-106,Azure Production App Service,CLOUD,azure-prod-app,,Managed Cloud Service,PRODUCTION,HIGH,Engineering,ACTIVE,Production managed web application service.,USR-007
+AST-107,Azure Key Vault,CLOUD,azure-keyvault,,Managed Cloud Service,PRODUCTION,CRITICAL,Security,ACTIVE,Cloud secrets and key management service.,USR-008
+AST-108,Google Cloud Analytics,CLOUD,gcp-analytics,,Managed Cloud Service,PRODUCTION,HIGH,Data,ACTIVE,Cloud analytics processing environment.,USR-009
+AST-109,AWS Staging Environment,CLOUD,aws-stage,,Amazon Linux 2023,PREPRODUCTION,MEDIUM,Engineering,ACTIVE,Preproduction cloud environment.,USR-001
+AST-110,Azure Staging App Service,CLOUD,azure-stage-app,,Managed Cloud Service,PREPRODUCTION,MEDIUM,Engineering,ACTIVE,Preproduction managed application service.,USR-002
+AST-111,AWS Development Sandbox,CLOUD,aws-dev-sandbox,,Amazon Linux 2023,DEVELOPMENT,LOW,Engineering,ACTIVE,Cloud development sandbox.,USR-003
+AST-112,Azure Development Subscription,CLOUD,azure-dev-sub,,Managed Cloud Service,DEVELOPMENT,LOW,Engineering,ACTIVE,Development cloud subscription.,USR-004
+AST-113,Cloud Security Scanner,CLOUD,cloud-sec-scan,,Managed Cloud Service,PRODUCTION,HIGH,Security,ACTIVE,Cloud-native security assessment service.,USR-005
+AST-114,Legacy Cloud Storage,CLOUD,legacy-cloud-storage,,Managed Cloud Service,PRODUCTION,LOW,Operations,INACTIVE,Legacy cloud storage pending data migration.,USR-006
+AST-115,Retired Test Subscription,CLOUD,retired-test-sub,,Managed Cloud Service,DEVELOPMENT,LOW,Engineering,DECOMMISSIONED,Retired cloud testing subscription.,USR-007
+AST-116,Badge Access Controller,OTHER,sec-access-01,10.50.1.10,Embedded Linux,PRODUCTION,HIGH,Security,ACTIVE,Physical access control management appliance.,USR-008
+AST-117,CCTV Management Appliance,OTHER,sec-cctv-01,10.50.1.20,Embedded Linux,PRODUCTION,HIGH,Security,ACTIVE,Central CCTV management appliance.,USR-009
+AST-118,Conference Room Controller,OTHER,iot-room-01,10.50.2.10,Embedded Linux,PRODUCTION,LOW,Operations,ACTIVE,Smart conference room control device.,USR-001
+AST-119,Environmental Sensor Gateway,OTHER,iot-env-01,10.50.2.20,Embedded Linux,PRODUCTION,MEDIUM,Operations,ACTIVE,Gateway for datacenter environmental sensors.,USR-002
+AST-120,Legacy NAS Appliance,OTHER,storage-nas-old,10.50.3.10,NAS OS,PRODUCTION,MEDIUM,IT,INACTIVE,Legacy network attached storage appliance.,USR-003

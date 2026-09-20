@@ -1,0 +1,11 @@
+{
+  "project": "VulnTrack",
+  "generatedAt": "2026-09-20T20:36:29.272Z",
+  "database": "vulntrack",
+  "counts": {
+    "users": 12,
+    "assets": 120,
+    "vulnerabilities": 120,
+    "findings": 300
+  }
+}

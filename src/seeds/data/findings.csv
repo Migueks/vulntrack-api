@@ -1,0 +1,301 @@
+findingCode,assetCode,vulnerabilityCode,assignedToCode,createdByCode,status,detectedAt,closedAt,closureNote
+FND-001,AST-008,VULN-012,USR-006,USR-005,OPEN,2026-01-08,,
+FND-002,AST-015,VULN-023,USR-002,USR-008,OPEN,2026-01-11,,
+FND-003,AST-023,VULN-034,USR-007,USR-002,OPEN,2026-01-14,,
+FND-004,AST-033,VULN-045,USR-003,USR-005,OPEN,2026-01-17,,
+FND-005,AST-040,VULN-057,USR-008,USR-008,OPEN,2026-01-20,,
+FND-006,AST-048,VULN-068,USR-004,USR-002,OPEN,2026-01-23,,
+FND-007,AST-057,VULN-079,,USR-005,OPEN,2026-01-26,,
+FND-008,AST-064,VULN-091,USR-005,USR-008,OPEN,2026-01-29,,
+FND-009,AST-073,VULN-102,USR-001,USR-002,OPEN,2026-02-01,,
+FND-010,AST-080,VULN-114,USR-006,USR-005,OPEN,2026-02-04,,
+FND-011,AST-089,VULN-006,USR-002,USR-008,OPEN,2026-02-07,,
+FND-012,AST-097,VULN-017,USR-007,USR-002,OPEN,2026-02-10,,
+FND-013,AST-105,VULN-028,USR-003,USR-005,OPEN,2026-02-13,,
+FND-014,AST-112,VULN-039,,USR-008,OPEN,2026-02-16,,
+FND-015,AST-003,VULN-051,USR-004,USR-002,OPEN,2026-02-19,,
+FND-016,AST-010,VULN-062,USR-009,USR-005,OPEN,2026-02-22,,
+FND-017,AST-017,VULN-073,USR-005,USR-008,OPEN,2026-02-25,,
+FND-018,AST-027,VULN-085,USR-001,USR-002,OPEN,2026-02-28,,
+FND-019,AST-035,VULN-096,USR-006,USR-005,OPEN,2026-03-03,,
+FND-020,AST-042,VULN-108,USR-002,USR-008,OPEN,2026-03-06,,
+FND-021,AST-050,VULN-120,,USR-002,OPEN,2026-03-09,,
+FND-022,AST-059,VULN-011,USR-003,USR-005,OPEN,2026-03-12,,
+FND-023,AST-066,VULN-022,USR-008,USR-008,OPEN,2026-03-15,,
+FND-024,AST-075,VULN-033,USR-004,USR-002,OPEN,2026-03-18,,
+FND-025,AST-082,VULN-045,USR-009,USR-005,OPEN,2026-03-21,,
+FND-026,AST-091,VULN-056,USR-005,USR-008,OPEN,2026-03-24,,
+FND-027,AST-099,VULN-067,USR-001,USR-002,OPEN,2026-03-27,,
+FND-028,AST-107,VULN-078,,USR-005,OPEN,2026-03-30,,
+FND-029,AST-116,VULN-090,USR-002,USR-008,OPEN,2026-04-02,,
+FND-030,AST-005,VULN-102,USR-007,USR-002,OPEN,2026-04-05,,
+FND-031,AST-012,VULN-113,USR-003,USR-005,OPEN,2026-04-08,,
+FND-032,AST-019,VULN-005,USR-008,USR-008,OPEN,2026-04-11,,
+FND-033,AST-030,VULN-016,USR-004,USR-002,OPEN,2026-04-14,,
+FND-034,AST-037,VULN-027,USR-009,USR-005,OPEN,2026-04-17,,
+FND-035,AST-044,VULN-039,,USR-008,OPEN,2026-04-20,,
+FND-036,AST-052,VULN-050,USR-001,USR-002,OPEN,2026-04-23,,
+FND-037,AST-061,VULN-061,USR-006,USR-005,OPEN,2026-04-26,,
+FND-038,AST-068,VULN-072,USR-002,USR-008,OPEN,2026-04-29,,
+FND-039,AST-077,VULN-084,USR-007,USR-002,OPEN,2026-05-02,,
+FND-040,AST-086,VULN-096,USR-003,USR-005,OPEN,2026-05-05,,
+FND-041,AST-093,VULN-107,USR-008,USR-008,OPEN,2026-05-08,,
+FND-042,AST-102,VULN-119,,USR-002,OPEN,2026-05-11,,
+FND-043,AST-109,VULN-010,USR-009,USR-005,OPEN,2026-05-14,,
+FND-044,AST-118,VULN-021,USR-005,USR-008,OPEN,2026-05-17,,
+FND-045,AST-007,VULN-033,USR-001,USR-002,OPEN,2026-05-20,,
+FND-046,AST-014,VULN-044,USR-006,USR-005,OPEN,2026-05-23,,
+FND-047,AST-021,VULN-055,USR-002,USR-008,OPEN,2026-05-26,,
+FND-048,AST-032,VULN-066,USR-007,USR-002,OPEN,2026-05-29,,
+FND-049,AST-039,VULN-077,,USR-005,OPEN,2026-06-01,,
+FND-050,AST-046,VULN-090,USR-008,USR-008,OPEN,2026-06-04,,
+FND-051,AST-001,VULN-002,USR-002,USR-006,IN_PROGRESS,2026-07-22,,
+FND-052,AST-002,VULN-007,USR-003,USR-007,IN_PROGRESS,2026-07-23,,
+FND-053,AST-004,VULN-013,USR-004,USR-008,IN_PROGRESS,2026-07-24,,
+FND-054,AST-006,VULN-018,USR-005,USR-009,IN_PROGRESS,2026-07-25,,
+FND-055,AST-009,VULN-024,USR-006,USR-001,IN_PROGRESS,2026-07-26,,
+FND-056,AST-011,VULN-029,USR-007,USR-002,IN_PROGRESS,2026-07-27,,
+FND-057,AST-013,VULN-035,USR-008,USR-003,IN_PROGRESS,2026-07-28,,
+FND-058,AST-016,VULN-041,USR-009,USR-004,IN_PROGRESS,2026-07-29,,
+FND-059,AST-018,VULN-046,USR-001,USR-005,IN_PROGRESS,2026-07-30,,
+FND-060,AST-020,VULN-052,USR-002,USR-006,IN_PROGRESS,2026-07-31,,
+FND-061,AST-022,VULN-058,USR-003,USR-007,IN_PROGRESS,2026-08-01,,
+FND-062,AST-026,VULN-063,USR-004,USR-008,IN_PROGRESS,2026-08-02,,
+FND-063,AST-028,VULN-069,USR-005,USR-009,IN_PROGRESS,2026-08-03,,
+FND-064,AST-030,VULN-074,USR-006,USR-001,IN_PROGRESS,2026-08-04,,
+FND-065,AST-031,VULN-081,USR-007,USR-002,IN_PROGRESS,2026-08-05,,
+FND-066,AST-034,VULN-086,USR-008,USR-003,IN_PROGRESS,2026-08-06,,
+FND-067,AST-036,VULN-092,USR-009,USR-004,IN_PROGRESS,2026-08-07,,
+FND-068,AST-038,VULN-097,USR-001,USR-005,IN_PROGRESS,2026-08-08,,
+FND-069,AST-041,VULN-103,USR-002,USR-006,IN_PROGRESS,2026-08-09,,
+FND-070,AST-043,VULN-109,USR-003,USR-007,IN_PROGRESS,2026-08-10,,
+FND-071,AST-045,VULN-115,USR-004,USR-008,IN_PROGRESS,2026-08-11,,
+FND-072,AST-047,VULN-003,USR-005,USR-009,IN_PROGRESS,2026-08-12,,
+FND-073,AST-049,VULN-008,USR-006,USR-001,IN_PROGRESS,2026-08-13,,
+FND-074,AST-051,VULN-014,USR-007,USR-002,IN_PROGRESS,2026-08-14,,
+FND-075,AST-053,VULN-019,USR-008,USR-003,IN_PROGRESS,2026-08-15,,
+FND-076,AST-056,VULN-025,USR-009,USR-004,IN_PROGRESS,2026-08-16,,
+FND-077,AST-058,VULN-030,USR-001,USR-005,IN_PROGRESS,2026-08-17,,
+FND-078,AST-060,VULN-036,USR-002,USR-006,IN_PROGRESS,2026-08-18,,
+FND-079,AST-062,VULN-042,USR-003,USR-007,IN_PROGRESS,2026-08-19,,
+FND-080,AST-063,VULN-047,USR-004,USR-008,IN_PROGRESS,2026-08-20,,
+FND-081,AST-065,VULN-053,USR-005,USR-009,IN_PROGRESS,2026-08-21,,
+FND-082,AST-067,VULN-059,USR-006,USR-001,IN_PROGRESS,2026-08-22,,
+FND-083,AST-070,VULN-064,USR-007,USR-002,IN_PROGRESS,2026-08-23,,
+FND-084,AST-071,VULN-070,USR-008,USR-003,IN_PROGRESS,2026-08-24,,
+FND-085,AST-072,VULN-075,USR-009,USR-004,IN_PROGRESS,2026-08-25,,
+FND-086,AST-074,VULN-082,USR-001,USR-005,IN_PROGRESS,2026-08-26,,
+FND-087,AST-076,VULN-087,USR-002,USR-006,IN_PROGRESS,2026-08-27,,
+FND-088,AST-078,VULN-093,USR-003,USR-007,IN_PROGRESS,2026-08-28,,
+FND-089,AST-079,VULN-098,USR-004,USR-008,IN_PROGRESS,2026-08-29,,
+FND-090,AST-081,VULN-104,USR-005,USR-009,IN_PROGRESS,2026-08-30,,
+FND-091,AST-083,VULN-110,USR-006,USR-001,IN_PROGRESS,2026-08-31,,
+FND-092,AST-086,VULN-116,USR-007,USR-002,IN_PROGRESS,2026-09-01,,
+FND-093,AST-087,VULN-004,USR-008,USR-003,IN_PROGRESS,2026-09-02,,
+FND-094,AST-088,VULN-009,USR-009,USR-004,IN_PROGRESS,2026-09-03,,
+FND-095,AST-090,VULN-015,USR-001,USR-005,IN_PROGRESS,2026-09-04,,
+FND-096,AST-092,VULN-020,USR-002,USR-006,IN_PROGRESS,2026-09-05,,
+FND-097,AST-094,VULN-026,USR-003,USR-007,IN_PROGRESS,2026-09-06,,
+FND-098,AST-095,VULN-031,USR-004,USR-008,IN_PROGRESS,2026-09-07,,
+FND-099,AST-096,VULN-037,USR-005,USR-009,IN_PROGRESS,2026-09-08,,
+FND-100,AST-098,VULN-043,USR-006,USR-001,IN_PROGRESS,2026-09-09,,
+FND-101,AST-001,VULN-011,USR-003,USR-002,MITIGATED,2026-06-12,,
+FND-102,AST-003,VULN-018,USR-004,USR-003,MITIGATED,2026-06-15,,
+FND-103,AST-005,VULN-024,USR-005,USR-004,MITIGATED,2026-06-18,,
+FND-104,AST-007,VULN-029,USR-006,USR-005,MITIGATED,2026-06-21,,
+FND-105,AST-009,VULN-035,USR-007,USR-006,MITIGATED,2026-06-24,,
+FND-106,AST-011,VULN-041,USR-008,USR-007,MITIGATED,2026-06-27,,
+FND-107,AST-013,VULN-047,USR-009,USR-008,MITIGATED,2026-06-30,,
+FND-108,AST-015,VULN-052,USR-001,USR-009,MITIGATED,2026-07-03,,
+FND-109,AST-017,VULN-058,USR-002,USR-001,MITIGATED,2026-07-06,,
+FND-110,AST-019,VULN-064,USR-003,USR-002,MITIGATED,2026-07-09,,
+FND-111,AST-021,VULN-069,USR-004,USR-003,MITIGATED,2026-07-12,,
+FND-112,AST-023,VULN-075,USR-005,USR-004,MITIGATED,2026-07-15,,
+FND-113,AST-026,VULN-081,USR-006,USR-005,MITIGATED,2026-07-18,,
+FND-114,AST-028,VULN-087,USR-007,USR-006,MITIGATED,2026-07-21,,
+FND-115,AST-030,VULN-093,USR-008,USR-007,MITIGATED,2026-07-24,,
+FND-116,AST-032,VULN-099,USR-009,USR-008,MITIGATED,2026-07-27,,
+FND-117,AST-034,VULN-105,USR-001,USR-009,MITIGATED,2026-07-30,,
+FND-118,AST-036,VULN-111,USR-002,USR-001,MITIGATED,2026-08-02,,
+FND-119,AST-038,VULN-117,USR-003,USR-002,MITIGATED,2026-08-05,,
+FND-120,AST-040,VULN-005,USR-004,USR-003,MITIGATED,2026-08-08,,
+FND-121,AST-042,VULN-012,USR-005,USR-004,MITIGATED,2026-08-10,,
+FND-122,AST-044,VULN-018,USR-006,USR-005,MITIGATED,2026-08-12,,
+FND-123,AST-046,VULN-024,USR-007,USR-006,MITIGATED,2026-08-14,,
+FND-124,AST-048,VULN-030,USR-008,USR-007,MITIGATED,2026-08-16,,
+FND-125,AST-050,VULN-036,USR-009,USR-008,MITIGATED,2026-08-18,,
+FND-126,AST-052,VULN-042,USR-001,USR-009,MITIGATED,2026-08-20,,
+FND-127,AST-054,VULN-048,USR-002,USR-001,MITIGATED,2026-08-22,,
+FND-128,AST-056,VULN-054,USR-003,USR-002,MITIGATED,2026-08-24,,
+FND-129,AST-058,VULN-060,USR-004,USR-003,MITIGATED,2026-08-26,,
+FND-130,AST-060,VULN-066,USR-005,USR-004,MITIGATED,2026-08-28,,
+FND-131,AST-062,VULN-072,USR-006,USR-005,MITIGATED,2026-08-30,,
+FND-132,AST-064,VULN-078,USR-007,USR-006,MITIGATED,2026-08-31,,
+FND-133,AST-066,VULN-084,USR-008,USR-007,MITIGATED,2026-09-01,,
+FND-134,AST-068,VULN-090,USR-009,USR-008,MITIGATED,2026-09-01,,
+FND-135,AST-070,VULN-096,USR-001,USR-009,MITIGATED,2026-09-02,,
+FND-136,AST-071,VULN-102,USR-002,USR-001,MITIGATED,2026-09-02,,
+FND-137,AST-073,VULN-108,USR-003,USR-002,MITIGATED,2026-09-03,,
+FND-138,AST-075,VULN-114,USR-004,USR-003,MITIGATED,2026-09-03,,
+FND-139,AST-077,VULN-120,USR-005,USR-004,MITIGATED,2026-09-04,,
+FND-140,AST-079,VULN-006,USR-006,USR-005,MITIGATED,2026-09-04,,
+FND-141,AST-081,VULN-013,USR-007,USR-006,MITIGATED,2026-09-05,,
+FND-142,AST-083,VULN-019,USR-008,USR-007,MITIGATED,2026-09-05,,
+FND-143,AST-084,VULN-025,USR-009,USR-008,MITIGATED,2026-09-06,,
+FND-144,AST-087,VULN-031,USR-001,USR-009,MITIGATED,2026-09-06,,
+FND-145,AST-089,VULN-037,USR-002,USR-001,MITIGATED,2026-09-07,,
+FND-146,AST-091,VULN-043,USR-003,USR-002,MITIGATED,2026-09-07,,
+FND-147,AST-093,VULN-049,USR-004,USR-003,MITIGATED,2026-09-08,,
+FND-148,AST-095,VULN-055,USR-005,USR-004,MITIGATED,2026-09-08,,
+FND-149,AST-097,VULN-061,USR-006,USR-005,MITIGATED,2026-09-09,,
+FND-150,AST-099,VULN-068,USR-007,USR-006,MITIGATED,2026-09-09,,
+FND-151,AST-100,VULN-012,USR-002,USR-001,RESOLVED,2026-07-01,2026-07-05,Database permissions were reduced to the minimum required level.
+FND-152,AST-101,VULN-035,USR-003,USR-002,RESOLVED,2026-07-03,2026-07-08,Cloud firewall rules were restricted to approved network ranges.
+FND-153,AST-102,VULN-051,USR-004,USR-003,RESOLVED,2026-07-05,2026-07-10,The vulnerable dependency was upgraded to a supported version.
+FND-154,AST-103,VULN-029,USR-005,USR-004,RESOLVED,2026-07-07,2026-07-13,Encryption at rest was enabled for the affected storage resource.
+FND-155,AST-104,VULN-069,USR-006,USR-005,RESOLVED,2026-07-09,2026-07-14,Backup encryption was enabled and encryption keys were rotated.
+FND-156,AST-105,VULN-074,USR-007,USR-006,RESOLVED,2026-08-12,2026-08-15,Multi-factor authentication was enforced for privileged cloud accounts.
+FND-157,AST-106,VULN-083,USR-008,USR-007,RESOLVED,2026-09-01,2026-09-03,API rate limiting was enabled with appropriate request thresholds.
+FND-158,AST-107,VULN-065,USR-009,USR-008,RESOLVED,2026-07-01,2026-07-04,The exposed application secret was removed and rotated.
+FND-159,AST-108,VULN-078,USR-002,USR-009,RESOLVED,2026-08-24,2026-08-27,Cloud audit logging was enabled across all required services.
+FND-160,AST-109,VULN-063,USR-003,USR-001,RESOLVED,2026-06-10,2026-06-15,The service configuration was hardened using the approved security baseline.
+FND-161,AST-110,VULN-086,USR-004,USR-002,RESOLVED,2026-09-02,2026-09-05,The legacy API version was disabled and clients were migrated.
+FND-162,AST-111,VULN-054,USR-005,USR-003,RESOLVED,2026-08-01,2026-08-06,Dependency versions were pinned and a lock file was introduced.
+FND-163,AST-112,VULN-076,USR-006,USR-004,RESOLVED,2026-08-18,2026-08-21,The cloud access key was rotated and replaced with short-lived credentials.
+FND-164,AST-113,VULN-109,USR-007,USR-005,RESOLVED,2026-09-08,2026-09-09,Scanner credentials were rotated and moved to secure secret storage.
+FND-165,AST-114,VULN-079,USR-008,USR-006,RESOLVED,2026-08-27,2026-09-01,Encryption at rest was enabled on the legacy cloud storage service.
+FND-166,AST-115,VULN-080,USR-009,USR-007,RESOLVED,2026-08-30,2026-09-02,The exposed inactive cloud resource was isolated and removed from public access.
+FND-167,AST-116,VULN-044,USR-002,USR-008,RESOLVED,2026-06-18,2026-06-22,File permissions were corrected and unnecessary access was removed.
+FND-168,AST-117,VULN-063,USR-003,USR-009,RESOLVED,2026-06-08,2026-06-12,The appliance configuration was hardened and insecure defaults were disabled.
+FND-169,AST-118,VULN-067,USR-004,USR-001,RESOLVED,2026-07-09,2026-07-11,The unused administrative account was disabled.
+FND-170,AST-119,VULN-068,USR-005,USR-002,RESOLVED,2026-07-17,2026-07-20,Security events were integrated with centralized logging.
+FND-171,AST-120,VULN-042,USR-006,USR-003,RESOLVED,2026-01-15,2026-01-20,The unsupported operating system was upgraded to a supported release.
+FND-172,AST-025,VULN-021,USR-007,USR-004,RESOLVED,2025-08-02,2025-08-07,Required browser security headers were configured before the server was retired.
+FND-173,AST-055,VULN-027,USR-008,USR-005,RESOLVED,2025-09-01,2025-09-06,Weak cryptographic algorithms were replaced with approved alternatives.
+FND-174,AST-069,VULN-032,USR-009,USR-006,RESOLVED,2025-12-01,2025-12-05,The unnecessary network service was disabled before decommissioning.
+FND-175,AST-100,VULN-015,USR-002,USR-007,RESOLVED,2026-06-01,2026-06-06,Exposed database backups were moved to encrypted restricted storage.
+FND-176,AST-101,VULN-071,USR-003,USR-008,RESOLVED,2026-08-04,2026-08-06,Public access to the cloud storage bucket was disabled.
+FND-177,AST-102,VULN-093,USR-004,USR-009,RESOLVED,2026-09-04,2026-09-06,The container base image was updated and the workload was rebuilt.
+FND-178,AST-103,VULN-077,USR-005,USR-001,RESOLVED,2026-08-22,2026-08-25,Secrets were removed from metadata and migrated to secure storage.
+FND-179,AST-104,VULN-070,USR-006,USR-002,RESOLVED,2026-08-02,2026-08-08,Backup restoration was tested successfully and documented.
+FND-180,AST-105,VULN-075,USR-007,USR-003,RESOLVED,2026-08-16,2026-08-20,Excessive cloud permissions were removed according to least privilege.
+FND-181,AST-106,VULN-084,USR-008,USR-004,RESOLVED,2026-09-01,2026-09-04,Sensitive fields were removed from API responses.
+FND-182,AST-107,VULN-028,USR-009,USR-005,RESOLVED,2025-08-27,2025-09-01,The hardcoded cryptographic key was removed and rotated.
+FND-183,AST-108,VULN-069,USR-002,USR-006,RESOLVED,2026-07-25,2026-07-30,Cloud backup encryption was enabled.
+FND-184,AST-109,VULN-061,USR-003,USR-007,RESOLVED,2026-05-22,2026-05-25,Debug mode was disabled in the staging environment.
+FND-185,AST-110,VULN-085,USR-004,USR-008,RESOLVED,2026-09-02,2026-09-05,Strict server-side API input validation was implemented.
+FND-186,AST-111,VULN-056,USR-005,USR-009,RESOLVED,2026-04-12,2026-04-18,Automated dependency vulnerability scanning was added to the pipeline.
+FND-187,AST-112,VULN-074,USR-006,USR-001,RESOLVED,2026-08-15,2026-08-18,Multi-factor authentication was enabled for the privileged cloud identity.
+FND-188,AST-113,VULN-110,USR-007,USR-002,RESOLVED,2026-09-08,2026-09-09,The scanner scope was expanded to include all critical assets.
+FND-189,AST-114,VULN-071,USR-008,USR-003,RESOLVED,2026-08-05,2026-08-09,Public access was removed from the affected cloud storage resource.
+FND-190,AST-115,VULN-077,USR-009,USR-004,RESOLVED,2026-08-22,2026-08-26,Secrets were removed from cloud metadata before the subscription was retired.
+FND-191,AST-116,VULN-033,USR-002,USR-005,RESOLVED,2025-10-07,2025-10-12,The insecure remote management protocol was replaced with an encrypted alternative.
+FND-192,AST-117,VULN-035,USR-003,USR-006,RESOLVED,2025-10-22,2025-10-27,Network access rules were restricted to required management traffic.
+FND-193,AST-118,VULN-005,USR-004,USR-007,RESOLVED,2025-03-01,2025-03-05,Session timeout settings were reduced to the approved limit.
+FND-194,AST-119,VULN-039,USR-005,USR-008,RESOLVED,2025-12-02,2025-12-07,Network access controls were introduced for connected sensor devices.
+FND-195,AST-120,VULN-032,USR-006,USR-009,RESOLVED,2025-12-03,2025-12-08,Unused network services were disabled on the storage appliance.
+FND-196,AST-025,VULN-042,USR-007,USR-001,RESOLVED,2026-01-18,2026-01-23,The legacy operating system was replaced before final decommissioning.
+FND-197,AST-055,VULN-044,USR-008,USR-002,RESOLVED,2026-02-07,2026-02-12,Insecure local file permissions were corrected.
+FND-198,AST-069,VULN-036,USR-009,USR-003,RESOLVED,2025-11-01,2025-11-06,SNMPv3 was enabled and the insecure community string was removed.
+FND-199,AST-100,VULN-062,USR-002,USR-004,RESOLVED,2026-06-02,2026-06-07,Sensitive information was removed from application logs.
+FND-200,AST-101,VULN-072,USR-003,USR-005,RESOLVED,2026-08-06,2026-08-10,Cloud security group rules were restricted to approved sources.
+FND-201,AST-002,VULN-019,USR-004,USR-002,ACCEPTED_RISK,2026-01-10,2026-01-14,Directory listing is limited to an isolated internal service and the residual risk has been formally accepted.
+FND-202,AST-004,VULN-023,USR-005,USR-003,ACCEPTED_RISK,2026-01-18,2026-01-21,Temporary HTTP access is required for a legacy integration scheduled for replacement.
+FND-203,AST-006,VULN-032,USR-006,USR-004,ACCEPTED_RISK,2026-01-26,2026-01-30,The exposed service is required by a legacy workflow and is restricted to a trusted internal network.
+FND-204,AST-008,VULN-046,USR-007,USR-005,ACCEPTED_RISK,2026-02-02,2026-02-06,Audit logging limitations are accepted until the monitoring platform migration is completed.
+FND-205,AST-010,VULN-050,USR-008,USR-006,ACCEPTED_RISK,2026-02-10,2026-02-13,The disclosed system information has low operational impact and compensating controls are in place.
+FND-206,AST-012,VULN-054,USR-009,USR-007,ACCEPTED_RISK,2026-02-18,2026-02-22,Dependency version flexibility is temporarily required by the current deployment process.
+FND-207,AST-014,VULN-059,USR-002,USR-008,ACCEPTED_RISK,2026-02-25,2026-03-01,The development dependency is isolated from production functionality and will be removed in the next release.
+FND-208,AST-016,VULN-062,USR-003,USR-009,ACCEPTED_RISK,2026-03-04,2026-03-08,Verbose logging is temporarily retained for development troubleshooting in a restricted environment.
+FND-209,AST-018,VULN-070,USR-004,USR-001,ACCEPTED_RISK,2026-03-12,2026-03-16,Backup restoration testing is deferred until the scheduled disaster recovery exercise.
+FND-210,AST-020,VULN-076,USR-005,USR-002,ACCEPTED_RISK,2026-03-20,2026-03-24,The access key remains required by a legacy integration and is protected by additional network controls.
+FND-211,AST-022,VULN-088,USR-006,USR-003,ACCEPTED_RISK,2026-03-28,2026-04-01,The longer token lifetime is temporarily required for an internal automation process.
+FND-212,AST-024,VULN-032,USR-007,USR-004,ACCEPTED_RISK,2026-04-05,2026-04-08,The inactive print service will be retired shortly and no further remediation is planned.
+FND-213,AST-026,VULN-113,USR-008,USR-005,ACCEPTED_RISK,2026-04-13,2026-04-17,Current log retention is accepted until additional storage capacity becomes available.
+FND-214,AST-028,VULN-120,USR-009,USR-006,ACCEPTED_RISK,2026-04-21,2026-04-25,Security ownership is being reorganized and temporary ownership remains with the IT department.
+FND-215,AST-029,VULN-057,USR-002,USR-007,ACCEPTED_RISK,2026-04-29,2026-05-03,The training environment is isolated and the abandoned package will be removed when the lab is rebuilt.
+FND-216,AST-031,VULN-005,USR-003,USR-008,ACCEPTED_RISK,2026-05-07,2026-05-11,The current session timeout is accepted for a low-risk internal workstation workflow.
+FND-217,AST-033,VULN-017,USR-004,USR-009,ACCEPTED_RISK,2026-05-15,2026-05-19,The affected internal tool has additional authentication protections and limited exposure.
+FND-218,AST-035,VULN-021,USR-005,USR-001,ACCEPTED_RISK,2026-05-23,2026-05-27,Missing browser headers are accepted temporarily because the application is accessible only through the corporate network.
+FND-219,AST-037,VULN-030,USR-006,USR-002,ACCEPTED_RISK,2026-05-31,2026-06-04,The affected functionality does not generate security-sensitive values and the residual risk is considered low.
+FND-220,AST-039,VULN-043,USR-007,USR-003,ACCEPTED_RISK,2026-06-08,2026-06-12,The privileged service is required by the current workstation management agent.
+FND-221,AST-041,VULN-053,USR-008,USR-004,ACCEPTED_RISK,2026-06-16,2026-06-20,The unsupported library remains required by a finance application scheduled for migration.
+FND-222,AST-043,VULN-060,USR-009,USR-005,ACCEPTED_RISK,2026-06-24,2026-06-28,Package integrity validation is deferred until the next deployment pipeline upgrade.
+FND-223,AST-045,VULN-068,USR-002,USR-006,ACCEPTED_RISK,2026-07-02,2026-07-06,Log forwarding limitations are accepted while the SIEM migration remains in progress.
+FND-224,AST-047,VULN-083,USR-003,USR-007,ACCEPTED_RISK,2026-07-10,2026-07-14,The internal API has restricted network exposure and current traffic levels are tightly controlled.
+FND-225,AST-049,VULN-088,USR-004,USR-008,ACCEPTED_RISK,2026-07-18,2026-07-22,The extended authentication session is required for a controlled internal business process.
+FND-226,AST-051,VULN-094,USR-005,USR-009,ACCEPTED_RISK,2026-07-26,2026-07-30,Container scanning will be introduced during the next CI platform migration.
+FND-227,AST-053,VULN-104,USR-006,USR-001,ACCEPTED_RISK,2026-08-01,2026-08-05,Artifact signing is planned for the next release process upgrade and repository access is currently restricted.
+FND-228,AST-054,VULN-108,USR-007,USR-002,ACCEPTED_RISK,2026-08-03,2026-08-07,The inactive workstation will be retired before the next dependency maintenance cycle.
+FND-229,AST-056,VULN-039,USR-008,USR-003,ACCEPTED_RISK,2026-08-05,2026-08-09,Network access control deployment is planned and current router access is limited to managed devices.
+FND-230,AST-058,VULN-113,USR-009,USR-004,ACCEPTED_RISK,2026-08-07,2026-08-11,Extended security log retention will be implemented after storage expansion.
+FND-231,AST-060,VULN-114,USR-002,USR-005,ACCEPTED_RISK,2026-08-09,2026-08-13,The minor time synchronization drift is accepted until the network time service is replaced.
+FND-232,AST-062,VULN-032,USR-003,USR-006,ACCEPTED_RISK,2026-08-11,2026-08-15,The exposed management service is restricted to the internal administration VLAN.
+FND-233,AST-064,VULN-040,USR-004,USR-007,ACCEPTED_RISK,2026-08-13,2026-08-17,The current VPN configuration is temporarily required for compatibility with a legacy remote access client.
+FND-234,AST-066,VULN-046,USR-005,USR-008,ACCEPTED_RISK,2026-08-15,2026-08-19,Local audit limitations are compensated by centralized network monitoring.
+FND-235,AST-068,VULN-037,USR-006,USR-009,ACCEPTED_RISK,2026-08-17,2026-08-21,The laboratory wireless environment is isolated and contains no production data.
+FND-236,AST-070,VULN-068,USR-007,USR-001,ACCEPTED_RISK,2026-08-19,2026-08-23,Logging improvements are deferred until the preproduction security platform upgrade.
+FND-237,AST-072,VULN-021,USR-008,USR-002,ACCEPTED_RISK,2026-08-21,2026-08-25,The administration portal is restricted to a trusted internal network and additional headers are planned.
+FND-238,AST-074,VULN-088,USR-009,USR-003,ACCEPTED_RISK,2026-08-23,2026-08-27,Longer support sessions are temporarily required by customer service workflows.
+FND-239,AST-076,VULN-113,USR-002,USR-004,ACCEPTED_RISK,2026-08-25,2026-08-29,Financial log retention will be increased during the next infrastructure expansion.
+FND-240,AST-078,VULN-019,USR-003,USR-005,ACCEPTED_RISK,2026-08-27,2026-08-31,Directory listing affects only a restricted internal documentation path and has been accepted temporarily.
+FND-241,AST-080,VULN-108,USR-004,USR-006,ACCEPTED_RISK,2026-08-29,2026-09-02,Dependency maintenance is scheduled for the next security dashboard release.
+FND-242,AST-082,VULN-054,USR-005,USR-007,ACCEPTED_RISK,2026-08-30,2026-09-03,Unpinned dependencies are temporarily retained in the staging environment for compatibility testing.
+FND-243,AST-084,VULN-042,USR-006,USR-008,ACCEPTED_RISK,2026-08-31,2026-09-04,The legacy intranet is scheduled for retirement and upgrading the operating system is not economically justified.
+FND-244,AST-086,VULN-070,USR-007,USR-009,ACCEPTED_RISK,2026-09-01,2026-09-05,Database recovery testing is scheduled as part of the upcoming continuity exercise.
+FND-245,AST-088,VULN-113,USR-008,USR-001,ACCEPTED_RISK,2026-09-02,2026-09-06,Longer identity log retention requires additional storage and has been formally deferred.
+FND-246,AST-090,VULN-120,USR-009,USR-002,ACCEPTED_RISK,2026-09-03,2026-09-07,Temporary security ownership remains with HR management until the new security owner is appointed.
+FND-247,AST-092,VULN-068,USR-002,USR-003,ACCEPTED_RISK,2026-09-04,2026-09-08,Log forwarding improvements are planned during the next logging infrastructure upgrade.
+FND-248,AST-094,VULN-005,USR-003,USR-004,ACCEPTED_RISK,2026-09-05,2026-09-09,The current session timeout is accepted for the restricted support application workflow.
+FND-249,AST-096,VULN-054,USR-004,USR-005,ACCEPTED_RISK,2026-09-06,2026-09-09,Dependency version flexibility is retained temporarily in the staging environment.
+FND-250,AST-098,VULN-094,USR-005,USR-006,ACCEPTED_RISK,2026-09-07,2026-09-09,Automated container scanning is deferred in the isolated development environment.
+FND-251,AST-001,VULN-120,USR-006,USR-001,FALSE_POSITIVE,2026-09-09,2026-09-10,The asset already has a documented security owner; the scanner inventory was outdated.
+FND-252,AST-002,VULN-119,USR-007,USR-002,FALSE_POSITIVE,2026-09-09,2026-09-10,The approved security baseline was verified manually and the reported configuration mismatch was incorrect.
+FND-253,AST-003,VULN-118,USR-008,USR-003,FALSE_POSITIVE,2026-09-09,2026-09-10,The legacy remote access service identified by the scanner is not installed on this server.
+FND-254,AST-004,VULN-117,USR-009,USR-004,FALSE_POSITIVE,2026-09-09,2026-09-10,The server does not permit removable media access; the detection originated from an incorrect policy mapping.
+FND-255,AST-005,VULN-116,USR-002,USR-005,FALSE_POSITIVE,2026-09-09,2026-09-10,Endpoint protection definitions were confirmed to be current; the scanner cache contained stale information.
+FND-256,AST-006,VULN-115,USR-003,USR-006,FALSE_POSITIVE,2026-09-09,2026-09-10,Endpoint protection is active and healthy; the monitoring agent briefly reported an incorrect status.
+FND-257,AST-007,VULN-114,USR-004,USR-007,FALSE_POSITIVE,2026-09-08,2026-09-09,System time was verified against the approved NTP source and no synchronization issue exists.
+FND-258,AST-008,VULN-113,USR-005,USR-008,FALSE_POSITIVE,2026-09-08,2026-09-09,Log retention meets the current security policy; the scanner used an outdated retention threshold.
+FND-259,AST-009,VULN-112,USR-006,USR-009,FALSE_POSITIVE,2026-09-08,2026-09-09,Security alerts are actively routed to the SOC; the scanner could not verify the external notification workflow.
+FND-260,AST-010,VULN-111,USR-007,USR-001,FALSE_POSITIVE,2026-09-08,2026-09-09,The server is forwarding all required log sources to the SIEM platform.
+FND-261,AST-011,VULN-110,USR-008,USR-002,FALSE_POSITIVE,2026-09-07,2026-09-08,The asset is included in the vulnerability scanner scope; an outdated asset identifier caused the detection.
+FND-262,AST-012,VULN-109,USR-009,USR-003,FALSE_POSITIVE,2026-09-07,2026-09-08,No scanner credentials are stored on this DNS server; the detected secret belonged to a test record.
+FND-263,AST-013,VULN-108,USR-002,USR-004,FALSE_POSITIVE,2026-09-07,2026-09-08,The system dependency update process was verified and complies with the current maintenance schedule.
+FND-264,AST-014,VULN-107,USR-003,USR-005,FALSE_POSITIVE,2026-09-07,2026-09-08,The finding relates to repository configuration and does not apply to this build server asset.
+FND-265,AST-015,VULN-106,USR-004,USR-006,FALSE_POSITIVE,2026-09-06,2026-09-07,Repository secret scanning confirmed that no production credential is exposed by this asset.
+FND-266,AST-016,VULN-105,USR-005,USR-007,FALSE_POSITIVE,2026-09-06,2026-09-07,"The development server has no production deployment privileges, so the reported condition does not apply."
+FND-267,AST-017,VULN-104,USR-006,USR-008,FALSE_POSITIVE,2026-09-06,2026-09-07,Deployment artifacts were verified as correctly signed; scanner signature metadata was incomplete.
+FND-268,AST-018,VULN-103,USR-007,USR-009,FALSE_POSITIVE,2026-09-06,2026-09-07,The QA server is not configured as a CI runner and therefore cannot possess the reported runner privileges.
+FND-269,AST-019,VULN-102,USR-008,USR-001,FALSE_POSITIVE,2026-09-05,2026-09-06,No untrusted code execution path exists on the staging server; the scanner incorrectly classified a test process.
+FND-270,AST-020,VULN-101,USR-009,USR-002,FALSE_POSITIVE,2026-09-05,2026-09-06,No CI credentials are stored or exposed on this staging API server.
+FND-271,AST-021,VULN-100,USR-002,USR-003,FALSE_POSITIVE,2026-09-05,2026-09-06,The application server is not a container host and the reported container network policy does not apply.
+FND-272,AST-022,VULN-099,USR-003,USR-004,FALSE_POSITIVE,2026-09-05,2026-09-06,The finance server does not host Kubernetes workloads; the detection resulted from an incorrect asset classification.
+FND-273,AST-023,VULN-098,USR-004,USR-005,FALSE_POSITIVE,2026-09-04,2026-09-05,"No Kubernetes RBAC configuration exists on the ERP server, confirming the finding as not applicable."
+FND-274,AST-024,VULN-097,USR-005,USR-006,FALSE_POSITIVE,2026-09-04,2026-09-05,The print server does not expose or operate a Kubernetes dashboard.
+FND-275,AST-025,VULN-096,USR-006,USR-007,FALSE_POSITIVE,2026-09-04,2026-09-05,The retired web server has no connection to the container registry identified by the scanner.
+FND-276,AST-026,VULN-095,USR-007,USR-008,FALSE_POSITIVE,2026-09-04,2026-09-05,Manual image inspection confirmed that no application secret is embedded in the deployed container layers.
+FND-277,AST-027,VULN-094,USR-008,USR-009,FALSE_POSITIVE,2026-09-03,2026-09-04,The automation server does not deploy container images and the reported control is not applicable.
+FND-278,AST-028,VULN-093,USR-009,USR-001,FALSE_POSITIVE,2026-09-03,2026-09-04,The reporting server is not containerized; the detected base image reference originated from documentation.
+FND-279,AST-029,VULN-092,USR-002,USR-003,FALSE_POSITIVE,2026-09-03,2026-09-04,The training server does not execute privileged containers; the scanner matched a laboratory configuration file.
+FND-280,AST-030,VULN-091,USR-003,USR-004,FALSE_POSITIVE,2026-09-03,2026-09-04,All security lab containers were verified to run as non-root users.
+FND-281,AST-031,VULN-090,USR-004,USR-005,FALSE_POSITIVE,2026-09-02,2026-09-03,The workstation application does not use persistent authentication tokens after logout.
+FND-282,AST-032,VULN-089,USR-005,USR-006,FALSE_POSITIVE,2026-09-02,2026-09-03,Network inspection confirmed that authentication tokens are never transmitted in URLs.
+FND-283,AST-033,VULN-088,USR-006,USR-007,FALSE_POSITIVE,2026-09-02,2026-09-03,The measured token lifetime complies with the organization's approved session policy.
+FND-284,AST-034,VULN-087,USR-007,USR-008,FALSE_POSITIVE,2026-09-01,2026-09-02,"JWT signatures, expiration and accepted algorithms were manually verified as correctly validated."
+FND-285,AST-035,VULN-086,USR-008,USR-009,FALSE_POSITIVE,2026-09-01,2026-09-02,The workstation does not host the legacy API endpoint detected by the automated scan.
+FND-286,AST-036,VULN-085,USR-009,USR-001,FALSE_POSITIVE,2026-09-01,2026-09-02,The reported API is not hosted on this workstation and the finding was caused by incorrect service attribution.
+FND-287,AST-037,VULN-084,USR-002,USR-003,FALSE_POSITIVE,2026-08-31,2026-09-01,Manual response inspection confirmed that no sensitive API fields are exposed from this asset.
+FND-288,AST-038,VULN-083,USR-003,USR-004,FALSE_POSITIVE,2026-08-31,2026-09-01,Rate limiting is already enforced upstream by the corporate API gateway.
+FND-289,AST-039,VULN-082,USR-004,USR-005,FALSE_POSITIVE,2026-08-30,2026-08-31,Authorization tests confirmed that access restrictions operate correctly for the affected application workflow.
+FND-290,AST-040,VULN-081,USR-005,USR-006,FALSE_POSITIVE,2026-08-30,2026-08-31,The endpoint requires valid authentication; the scanner test used an existing authenticated session.
+FND-291,AST-041,VULN-080,USR-006,USR-007,FALSE_POSITIVE,2026-08-29,2026-08-30,The finance workstation was incorrectly associated with an inactive cloud resource by asset discovery.
+FND-292,AST-042,VULN-079,USR-007,USR-008,FALSE_POSITIVE,2026-08-27,2026-08-28,The affected data is stored locally with approved disk encryption and is not an unencrypted cloud resource.
+FND-293,AST-043,VULN-078,USR-008,USR-009,FALSE_POSITIVE,2026-08-24,2026-08-25,The workstation does not manage cloud audit trails; the finding was linked to the wrong asset.
+FND-294,AST-044,VULN-077,USR-009,USR-001,FALSE_POSITIVE,2026-08-21,2026-08-22,No cloud instance metadata or stored secret exists on this finance workstation.
+FND-295,AST-045,VULN-076,USR-002,USR-003,FALSE_POSITIVE,2026-08-18,2026-08-19,The workstation does not use the cloud access key identified by the scanner.
+FND-296,AST-046,VULN-075,USR-003,USR-004,FALSE_POSITIVE,2026-08-15,2026-08-16,The HR workstation has no cloud identity assignments and the reported permission set is not applicable.
+FND-297,AST-047,VULN-074,USR-004,USR-005,FALSE_POSITIVE,2026-08-12,2026-08-13,The detected cloud administrator account does not belong to this workstation or its assigned user.
+FND-298,AST-048,VULN-073,USR-005,USR-006,FALSE_POSITIVE,2026-08-09,2026-08-10,The workstation does not host or expose a cloud database; asset correlation produced an incorrect match.
+FND-299,AST-049,VULN-072,USR-006,USR-007,FALSE_POSITIVE,2026-08-06,2026-08-07,No cloud security group is associated with this endpoint; the scanner linked the rule to the wrong resource.
+FND-300,AST-050,VULN-071,USR-007,USR-008,FALSE_POSITIVE,2026-08-03,2026-08-04,The security workstation does not own the public cloud storage bucket reported by the discovery engine.
