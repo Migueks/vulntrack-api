@@ -3,6 +3,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 
 const authRoutes = require("./modules/auth/auth.routes");
+const userRoutes = require("./modules/users/user.routes");
 
 const notFound = require("./middlewares/notFound");
 const errorHandler = require("./middlewares/errorHandler");
@@ -34,6 +35,7 @@ app.get("/api/v1/health", (req, res) => {
 
 // Rutas de autenticación de VulnTrack.
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/users", userRoutes);
 
 // Gestiona rutas inexistentes y errores.
 app.use(notFound);
