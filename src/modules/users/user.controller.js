@@ -56,10 +56,34 @@ const updateUserStatus = asyncHandler(async (req, res) => {
   });
 });
 
+// Permite editar el perfil del usuario autenticado.
+const updateMe = asyncHandler(async (req, res) => {
+  const user = await userService.updateMe(req.user._id, req.body);
+
+  return res.status(200).json({
+    success: true,
+    data: user,
+  });
+});
+
+// Cambia la contraseña del usuario autenticado.
+const changePassword = asyncHandler(async (req, res) => {
+  await userService.changePassword(req.user._id, req.body);
+
+  return res.status(200).json({
+    success: true,
+    data: {
+      message: "Password updated successfully.",
+    },
+  });
+});
+
 module.exports = {
   getUsers,
   getUserById,
   createUser,
   updateUser,
   updateUserStatus,
+  updateMe,
+  changePassword,
 };

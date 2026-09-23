@@ -69,8 +69,49 @@ const updateUserStatusSchema = z
   })
   .strict();
 
+// Permite al usuario modificar únicamente sus propios datos básicos.
+const updateMeSchema = z
+  .object({
+    name: z
+      .string()
+      .trim()
+      .min(2, "Name must contain at least 2 characters.")
+      .max(100, "Name is too long.")
+      .optional(),
+
+    email: z
+      .string()
+      .trim()
+      .toLowerCase()
+      .max(254, "Email address is too long.")
+      .email("Enter a valid email address.")
+      .optional(),
+  })
+  .strict()
+  .refine(
+    (data) => Object.keys(data).length > 0,
+    "At least one field must be provided.",
+  );
+
+// Exige la contraseña actual antes de establecer una nueva.
+const changePasswordSchema = z
+  .object({
+    currentPassword: z
+      .string()
+      .min(1, "Current password is required.")
+      .refine(
+        (password) => Buffer.byteLength(password, "utf8") <= 72,
+        "Current password exceeds the supported byte length.",
+      ),
+
+    newPassword: passwordSchema,
+  })
+  .strict();
+
 module.exports = {
   createUserSchema,
   updateUserSchema,
   updateUserStatusSchema,
+  updateMeSchema,
+  changePasswordSchema,
 };

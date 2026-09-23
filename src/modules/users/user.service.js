@@ -258,10 +258,81 @@ const updateUserStatus = async (id, { isActive }, currentUser) => {
   return toPublicUser(user);
 };
 
+// Permite al usuario modificar su propio nombre o email.
+const updateMe = async (userId, data) => {
+  const user = await findUserOrFail(userId);
+
+  if (data.email !== undefined && data.email !== user.email) {
+    const existingUser = await User.exists({
+      email: data.email,
+      _id: { $ne: user._id },
+    });
+
+    if (existingUser) {
+      throw new ApiError(409, "Email already registered.");
+    }
+  }
+
+  if (data.name !== undefined) {
+    user.name = data.name;
+  }
+
+  if (data.email !== undefined) {
+    user.email = data.email;
+  }
+
+  try {
+    await user.save();
+  } catch (error) {
+    // Mantiene la protección ante altas o cambios concurrentes.
+    if (error.code === 11000 && error.keyPattern?.email) {
+      throw new ApiError(409, "Email already registered.");
+    }
+
+    throw error;
+  }
+
+  return toPublicUser(user);
+};
+
+// Cambia la contraseña tras comprobar la contraseña actual.
+const changePassword = async (userId, { currentPassword, newPassword }) => {
+  const user = await User.findById(userId).select("+password");
+
+  if (!user || !user.isActive) {
+    throw new ApiError(401, "Authentication required.");
+  }
+
+  const currentPasswordMatches = await bcrypt.compare(
+    currentPassword,
+    user.password,
+  );
+
+  if (!currentPasswordMatches) {
+    throw new ApiError(400, "Current password is incorrect.");
+  }
+
+  // Impide reutilizar exactamente la misma contraseña.
+  const samePassword = await bcrypt.compare(newPassword, user.password);
+
+  if (samePassword) {
+    throw new ApiError(
+      400,
+      "New password must be different from the current password.",
+    );
+  }
+
+  user.password = await bcrypt.hash(newPassword, 12);
+
+  await user.save();
+};
+
 module.exports = {
   getUsers,
   getUserById,
   createUser,
   updateUser,
   updateUserStatus,
+  updateMe,
+  changePassword,
 };

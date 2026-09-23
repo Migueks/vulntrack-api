@@ -6,6 +6,8 @@ const {
   createUserSchema,
   updateUserSchema,
   updateUserStatusSchema,
+  updateMeSchema,
+  changePasswordSchema,
 } = require("./user.schema");
 
 const authenticate = require("../../middlewares/authenticate");
@@ -16,22 +18,31 @@ const { USER_ROLES } = require("../../constants/roles");
 
 const router = express.Router();
 
-// Todas las rutas del módulo requieren rol ADMIN.
-router.use(authenticate, authorize(USER_ROLES.ADMIN));
+// Todas las rutas de usuarios requieren autenticación.
+router.use(authenticate);
 
-// Consulta y creación de usuarios.
+// Operaciones disponibles para cualquier usuario autenticado.
+router.patch("/me", validate(updateMeSchema), userController.updateMe);
+
+router.patch(
+  "/me/password",
+  validate(changePasswordSchema),
+  userController.changePassword,
+);
+
+// A partir de aquí las operaciones son exclusivas de ADMIN.
+router.use(authorize(USER_ROLES.ADMIN));
+
 router.get("/", userController.getUsers);
 
 router.post("/", validate(createUserSchema), userController.createUser);
 
-// Modifica la activación de una cuenta.
 router.patch(
   "/:id/status",
   validate(updateUserStatusSchema),
   userController.updateUserStatus,
 );
 
-// Consulta y edición individual.
 router.get("/:id", userController.getUserById);
 
 router.patch("/:id", validate(updateUserSchema), userController.updateUser);
