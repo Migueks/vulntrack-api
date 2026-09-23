@@ -6,6 +6,7 @@ const authRoutes = require("./modules/auth/auth.routes");
 const userRoutes = require("./modules/users/user.routes");
 const assetRoutes = require("./modules/assets/asset.routes");
 const vulnerabilityRoutes = require("./modules/vulnerabilities/vulnerability.routes");
+const findingRoutes = require("./modules/findings/finding.routes");
 
 const notFound = require("./middlewares/notFound");
 const errorHandler = require("./middlewares/errorHandler");
@@ -40,6 +41,7 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/assets", assetRoutes);
 app.use("/api/v1/vulnerabilities", vulnerabilityRoutes);
+app.use("/api/v1/findings", findingRoutes);
 
 // Gestiona rutas inexistentes y errores.
 app.use(notFound);

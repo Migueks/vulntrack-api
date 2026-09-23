@@ -34,9 +34,11 @@ const CLOSED_FINDING_STATUSES = [
   FINDING_STATUSES.FALSE_POSITIVE,
 ];
 
-// Arrays reutilizables para enums de Mongoose y futuras validaciones.
+// Arrays reutilizables para enums de Mongoose y validaciones.
 const FINDING_STATUS_VALUES = Object.values(FINDING_STATUSES);
+
 const FINDING_PRIORITY_VALUES = Object.values(FINDING_PRIORITIES);
+
 const FINDING_HISTORY_ACTION_VALUES = Object.values(FINDING_HISTORY_ACTIONS);
 
 module.exports = {

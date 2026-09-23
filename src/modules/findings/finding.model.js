@@ -199,6 +199,25 @@ findingSchema.index({ assignedTo: 1, status: 1 });
 findingSchema.index({ status: 1, dueDate: 1 });
 findingSchema.index({ asset: 1, vulnerability: 1 });
 
+// Impide dos Findings activos para el mismo activo y vulnerabilidad.
+findingSchema.index(
+  {
+    asset: 1,
+    vulnerability: 1,
+  },
+  {
+    name: "unique_active_asset_vulnerability",
+
+    unique: true,
+
+    partialFilterExpression: {
+      status: {
+        $in: ["OPEN", "IN_PROGRESS", "MITIGATED"],
+      },
+    },
+  },
+);
+
 const Finding = mongoose.model("Finding", findingSchema);
 
 module.exports = Finding;
