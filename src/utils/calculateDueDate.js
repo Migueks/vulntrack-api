@@ -15,7 +15,8 @@ const calculateDueDate = (priority, detectedAt = new Date()) => {
     throw new Error("Invalid detection date");
   }
 
-  dueDate.setDate(dueDate.getDate() + days);
+  // Utilizamos UTC para evitar diferencias por cambios horarios.
+  dueDate.setUTCDate(dueDate.getUTCDate() + days);
 
   return dueDate;
 };

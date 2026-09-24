@@ -1023,16 +1023,17 @@ const addEvidence = async (id, file, currentUser) => {
         "Finding changed or evidence limit reached. Retry.",
       );
     }
-
-    return getFindingById(id);
   } catch (error) {
-    // Evita dejar recursos remotos si falla MongoDB.
+    // Intenta limpiar Cloudinary si falla el guardado en MongoDB.
     await deletePrivateEvidence(uploaded.publicId).catch((cleanupError) => {
       console.error("Cloudinary cleanup failed:", cleanupError);
     });
 
     throw error;
   }
+
+  // Una lectura fallida no debe borrar un archivo ya registrado.
+  return getFindingById(id);
 };
 
 // Recupera evidencias locales o privadas de Cloudinary.

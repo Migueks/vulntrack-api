@@ -67,6 +67,13 @@ const userSchema = new mongoose.Schema(
       default: true,
     },
 
+    tokenVersion: {
+      type: Number,
+      default: 0,
+      min: 0,
+      required: true,
+    },
+
     lastLogin: {
       type: Date,
       default: null,

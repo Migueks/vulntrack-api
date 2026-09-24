@@ -32,10 +32,12 @@ const login = async ({ email, password }) => {
     throw new ApiError(401, "Invalid credentials.");
   }
 
-  // El token identifica al usuario, pero no guarda su rol.
+  // El token identifica al usuario e incluye su versión de sesión.
+  // El rol se consulta en MongoDB en cada petición.
   const token = jwt.sign(
     {
       sub: user._id.toString(),
+      tokenVersion: user.tokenVersion ?? 0,
     },
     process.env.JWT_SECRET,
     {

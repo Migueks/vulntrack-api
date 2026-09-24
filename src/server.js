@@ -1,5 +1,10 @@
 require("dotenv").config();
 
+const validateEnv = require("./config/env");
+
+// Comprobamos la configuración antes de iniciar la aplicación.
+validateEnv();
+
 const app = require("./app");
 const connectDB = require("./config/database");
 

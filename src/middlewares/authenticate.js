@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const User = require("../modules/users/user.model");
 const ApiError = require("../utils/ApiError");
 const asyncHandler = require("../utils/asyncHandler");
+const isTokenVersionValid = require("../utils/isTokenVersionValid");
 
 // Comprueba el JWT y recupera el usuario actual.
 const authenticate = asyncHandler(async (req, res, next) => {
@@ -34,11 +35,12 @@ const authenticate = asyncHandler(async (req, res, next) => {
     throw new ApiError(401, "Invalid or expired token.");
   }
 
+  // Recuperamos la información actual del usuario.
   const user = await User.findById(payload.sub);
 
-  // Un usuario eliminado o desactivado pierde el acceso.
-  if (!user || !user.isActive) {
-    throw new ApiError(401, "Authentication required.");
+  // Invalida JWT antiguos tras cambios de contraseña o estado de cuenta.
+  if (!isTokenVersionValid(payload, user)) {
+    throw new ApiError(401, "Invalid or expired token.");
   }
 
   // Los siguientes middlewares podrán consultar req.user.

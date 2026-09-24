@@ -1,4 +1,27 @@
+
+# Dependencias
 node_modules/
+
+# Variables de entorno privadas
 .env
-~$*.xlsx
+.env.*
+!.env.example
+
+# Evidencias privadas almacenadas localmente
 /storage/evidence/
+
+# Archivos temporales de Microsoft Excel
+~$*.xlsx
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Resultados de cobertura de pruebas
+coverage/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

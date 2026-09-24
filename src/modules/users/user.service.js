@@ -237,7 +237,10 @@ const updateUser = async (id, data, currentUser) => {
   return toPublicUser(user);
 };
 
-// Activa o desactiva una cuenta.
+/**
+ * Activa o desactiva una cuenta.
+ * Cada cambio de estado invalida los JWT anteriores.
+ */
 const updateUserStatus = async (id, { isActive }, currentUser) => {
   const user = await findUserOrFail(id);
 
@@ -251,9 +254,39 @@ const updateUserStatus = async (id, { isActive }, currentUser) => {
     await ensureNoActiveFindings(user._id);
   }
 
-  user.isActive = isActive;
+  // Si el estado no cambia, no necesitamos invalidar sesiones.
+  if (user.isActive === isActive) {
+    return toPublicUser(user);
+  }
 
-  await user.save();
+  // Actualización atómica del estado y la versión de sesión.
+  const result = await User.updateOne(
+    {
+      _id: user._id,
+      isActive: user.isActive,
+
+      // Compatibilidad con los usuarios existentes del seed.
+      tokenVersion:
+        (user.tokenVersion ?? 0) === 0 ? { $in: [null, 0] } : user.tokenVersion,
+    },
+    {
+      $set: {
+        isActive,
+      },
+
+      // Invalida los JWT emitidos anteriormente.
+      $inc: {
+        tokenVersion: 1,
+      },
+    },
+  );
+
+  // Evita sobrescribir cambios concurrentes.
+  if (result.modifiedCount !== 1) {
+    throw new ApiError(409, "Account changed during the update. Retry.");
+  }
+
+  user.isActive = isActive;
 
   return toPublicUser(user);
 };
@@ -295,14 +328,19 @@ const updateMe = async (userId, data) => {
   return toPublicUser(user);
 };
 
-// Cambia la contraseña tras comprobar la contraseña actual.
+/**
+ * Cambia la contraseña del usuario autenticado.
+ * Invalida todos los JWT emitidos antes del cambio.
+ */
 const changePassword = async (userId, { currentPassword, newPassword }) => {
+  // Recuperamos expresamente el hash de la contraseña.
   const user = await User.findById(userId).select("+password");
 
   if (!user || !user.isActive) {
     throw new ApiError(401, "Authentication required.");
   }
 
+  // Comprueba que el usuario conoce su contraseña actual.
   const currentPasswordMatches = await bcrypt.compare(
     currentPassword,
     user.password,
@@ -322,9 +360,38 @@ const changePassword = async (userId, { currentPassword, newPassword }) => {
     );
   }
 
-  user.password = await bcrypt.hash(newPassword, 12);
+  // Genera el hash de la nueva contraseña.
+  const hashedPassword = await bcrypt.hash(newPassword, 12);
 
-  await user.save();
+  // Actualiza contraseña y versión de sesión en una sola operación.
+  const result = await User.updateOne(
+    {
+      _id: user._id,
+
+      // Impide sobrescribir otra actualización de contraseña.
+      password: user.password,
+
+      // Compatibilidad con usuarios anteriores al nuevo campo.
+      tokenVersion:
+        (user.tokenVersion ?? 0) === 0 ? { $in: [null, 0] } : user.tokenVersion,
+
+      isActive: true,
+    },
+    {
+      $set: {
+        password: hashedPassword,
+      },
+
+      // Invalida las sesiones anteriores.
+      $inc: {
+        tokenVersion: 1,
+      },
+    },
+  );
+
+  if (result.modifiedCount !== 1) {
+    throw new ApiError(409, "Account changed during password update. Retry.");
+  }
 };
 
 module.exports = {

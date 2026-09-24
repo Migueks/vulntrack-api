@@ -4,7 +4,12 @@ const {
 
 // Calcula la severidad automáticamente a partir de la puntuación CVSS.
 const calculateSeverity = (cvssScore) => {
-  if (cvssScore >= 9 && cvssScore <= 10) {
+  // Rechaza puntuaciones inválidas antes de clasificarlas.
+  if (!Number.isFinite(cvssScore) || cvssScore < 0.1 || cvssScore > 10) {
+    throw new Error("CVSS score must be between 0.1 and 10");
+  }
+
+  if (cvssScore >= 9) {
     return VULNERABILITY_SEVERITIES.CRITICAL;
   }
 
@@ -16,11 +21,7 @@ const calculateSeverity = (cvssScore) => {
     return VULNERABILITY_SEVERITIES.MEDIUM;
   }
 
-  if (cvssScore >= 0.1) {
-    return VULNERABILITY_SEVERITIES.LOW;
-  }
-
-  throw new Error("CVSS score must be between 0.1 and 10");
+  return VULNERABILITY_SEVERITIES.LOW;
 };
 
 module.exports = calculateSeverity;
