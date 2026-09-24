@@ -19,6 +19,12 @@ const ApiError = require("../../utils/ApiError");
 const { USER_ROLES } = require("../../constants/roles");
 
 const {
+  uploadPrivateEvidence,
+  downloadPrivateEvidence,
+  deletePrivateEvidence,
+} = require("../../services/evidenceCloudinary");
+
+const {
   FINDING_STATUSES,
   FINDING_HISTORY_ACTIONS: HISTORY_ACTIONS,
 } = require("../../constants/finding.constants");
@@ -915,7 +921,7 @@ const ALLOWED_FILE_TYPES = {
   "application/pdf": "pdf",
 };
 
-// Añade una evidencia tras comprobar su contenido real.
+// Sube una evidencia privada y registra sus metadatos.
 const addEvidence = async (id, file, currentUser) => {
   const finding = await readFinding(id);
 
@@ -928,34 +934,35 @@ const addEvidence = async (id, file, currentUser) => {
     );
   }
 
-  // file-type utiliza ESM.
+  // Detecta el contenido real del archivo.
   const { fileTypeFromBuffer } = await import("file-type");
 
   const detected = await fileTypeFromBuffer(file.buffer);
 
-  const ext = ALLOWED_FILE_TYPES[detected?.mime];
+  const extension = ALLOWED_FILE_TYPES[detected?.mime];
 
-  // No confiamos en la extensión enviada por el cliente.
-  if (!ext || detected.mime !== file.mimetype) {
+  if (!extension || detected.mime !== file.mimetype) {
     throw new ApiError(
       400,
       "Evidence must be a genuine PNG, JPEG, WEBP or PDF file.",
     );
   }
 
+  // Primero almacenamos el recurso en Cloudinary.
+  const uploaded = await uploadPrivateEvidence(file.buffer, extension);
+
   const evidenceId = new mongoose.Types.ObjectId();
 
-  const filename = `${randomUUID()}.${ext}`;
-
-  const url = `/api/v1/findings/${id}` + `/evidence/${evidenceId}/file`;
+  const now = new Date();
 
   const evidence = {
     _id: evidenceId,
 
-    url,
+    // Siempre exponemos la descarga protegida de nuestra API.
+    url: `/api/v1/findings/${id}` + `/evidence/${evidenceId}/file`,
 
-    // Identificador interno del archivo físico.
-    publicId: filename,
+    // Identificador remoto; nunca exponemos el API Secret.
+    publicId: uploaded.publicId,
 
     originalName: path.basename(file.originalname).slice(0, 255),
 
@@ -965,19 +972,8 @@ const addEvidence = async (id, file, currentUser) => {
 
     uploadedBy: currentUser._id,
 
-    uploadedAt: new Date(),
+    uploadedAt: now,
   };
-
-  const filepath = path.join(EVIDENCE_DIR, filename);
-
-  await mkdir(EVIDENCE_DIR, {
-    recursive: true,
-  });
-
-  // wx impide sobrescribir un archivo existente.
-  await writeFile(filepath, file.buffer, {
-    flag: "wx",
-  });
 
   try {
     const updated = await Finding.findOneAndUpdate(
@@ -988,7 +984,6 @@ const addEvidence = async (id, file, currentUser) => {
           $in: OPEN_STATUSES,
         },
 
-        // Máximo diez evidencias.
         "evidence.9": {
           $exists: false,
         },
@@ -1009,7 +1004,7 @@ const addEvidence = async (id, file, currentUser) => {
 
             performedBy: currentUser._id,
 
-            date: new Date(),
+            date: now,
 
             note: `Added evidence: ${evidence.originalName}.`,
           },
@@ -1017,7 +1012,7 @@ const addEvidence = async (id, file, currentUser) => {
       },
 
       {
-        new: true,
+        returnDocument: "after",
         runValidators: true,
       },
     );
@@ -1031,16 +1026,16 @@ const addEvidence = async (id, file, currentUser) => {
 
     return getFindingById(id);
   } catch (error) {
-    // Evita dejar archivos si falla MongoDB.
-    await unlink(filepath).catch((cleanupError) => {
-      console.error("Evidence cleanup failed:", cleanupError);
+    // Evita dejar recursos remotos si falla MongoDB.
+    await deletePrivateEvidence(uploaded.publicId).catch((cleanupError) => {
+      console.error("Cloudinary cleanup failed:", cleanupError);
     });
 
     throw error;
   }
 };
 
-// Recupera una evidencia privada tras comprobar permisos.
+// Recupera evidencias locales o privadas de Cloudinary.
 const readEvidence = async (id, evidenceId, currentUser) => {
   assertId(evidenceId, "evidence");
 
@@ -1056,29 +1051,44 @@ const readEvidence = async (id, evidenceId, currentUser) => {
     throw new ApiError(404, "Evidence not found.");
   }
 
-  // Nunca utilizamos una ruta arbitraria recibida del cliente.
-  if (!/^[0-9a-f-]{36}\.(png|jpg|webp|pdf)$/.test(evidence.publicId)) {
-    throw new ApiError(500, "Invalid evidence storage identifier.");
+  const extension = ALLOWED_FILE_TYPES[evidence.mimeType];
+
+  if (!extension) {
+    throw new ApiError(500, "Unsupported stored evidence format.");
   }
 
-  try {
-    return {
-      content: await readFile(path.join(EVIDENCE_DIR, evidence.publicId)),
+  // Identifica los archivos antiguos del almacenamiento local.
+  const isLocalEvidence = /^[0-9a-f-]{36}\.(png|jpg|webp|pdf)$/.test(
+    evidence.publicId,
+  );
 
-      mimeType: evidence.mimeType,
+  let content;
 
-      originalName: evidence.originalName,
-    };
-  } catch (error) {
-    if (error.code === "ENOENT") {
-      throw new ApiError(404, "Evidence file not found on disk.");
+  if (isLocalEvidence) {
+    try {
+      content = await readFile(path.join(EVIDENCE_DIR, evidence.publicId));
+    } catch (error) {
+      if (error.code === "ENOENT") {
+        throw new ApiError(404, "Evidence file not found.");
+      }
+
+      throw error;
     }
-
-    throw error;
+  } else {
+    // Recupera el recurso autenticado desde Cloudinary.
+    content = await downloadPrivateEvidence(evidence.publicId, extension);
   }
+
+  return {
+    content,
+
+    mimeType: evidence.mimeType,
+
+    originalName: evidence.originalName,
+  };
 };
 
-// Elimina una evidencia respetando el historial del hallazgo.
+// Elimina una evidencia y conserva el evento en el historial.
 const removeEvidence = async (id, evidenceId, currentUser) => {
   assertId(evidenceId, "evidence");
 
@@ -1092,7 +1102,6 @@ const removeEvidence = async (id, evidenceId, currentUser) => {
     throw new ApiError(404, "Evidence not found.");
   }
 
-  // ANALYST solo puede eliminar sus propias evidencias.
   if (!isAdmin(currentUser) && !sameId(evidence.uploadedBy, currentUser._id)) {
     throw new ApiError(403, "Analysts may remove only their own evidence.");
   }
@@ -1137,7 +1146,7 @@ const removeEvidence = async (id, evidenceId, currentUser) => {
     },
 
     {
-      new: true,
+      returnDocument: "after",
       runValidators: true,
     },
   );
@@ -1146,12 +1155,20 @@ const removeEvidence = async (id, evidenceId, currentUser) => {
     throw new ApiError(409, "Evidence changed during removal. Retry.");
   }
 
-  // Si falla la eliminación física, registramos el archivo huérfano.
-  await unlink(path.join(EVIDENCE_DIR, filename)).catch((error) => {
-    if (error.code !== "ENOENT") {
-      console.error("Orphan evidence needs cleanup:", error);
-    }
-  });
+  // Compatibilidad con evidencias locales anteriores.
+  const isLocalEvidence = /^[0-9a-f-]{36}\.(png|jpg|webp|pdf)$/.test(filename);
+
+  if (isLocalEvidence) {
+    await unlink(path.join(EVIDENCE_DIR, filename)).catch((error) => {
+      if (error.code !== "ENOENT") {
+        console.error("Local evidence cleanup failed:", error);
+      }
+    });
+  } else {
+    await deletePrivateEvidence(filename).catch((error) => {
+      console.error("Cloudinary evidence cleanup failed:", error);
+    });
+  }
 
   return getFindingById(id);
 };
