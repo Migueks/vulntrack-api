@@ -411,19 +411,37 @@ npm audit
 
 El backend funcional se encuentra desarrollado y probado manualmente mediante Insomnia.
 
-La batería inicial de pruebas unitarias se ha completado correctamente.
+La batería inicial de 14 pruebas unitarias se ha completado correctamente.
 
-Antes de un despliegue público se deberán completar pruebas de integración y concurrencia, revisar los permisos mínimos de Cloudinary y configurar el entorno definitivo de producción.
+La API está integrada con el frontend de VulnTrack y proporciona autenticación, autorización por roles, gestión de usuarios, activos, vulnerabilidades, Findings, evidencias privadas y datos agregados para el Dashboard.
+
+Antes de un despliegue público definitivo se recomienda completar pruebas de integración y concurrencia, revisar los permisos mínimos de Cloudinary y configurar las variables del entorno de producción.
 
 ## Frontend
 
-El frontend se desarrollará en un repositorio independiente:
+El frontend de VulnTrack se encuentra desarrollado en un repositorio independiente:
 
 ```text
 vulntrack-web
 ```
 
-Utilizará React y consumirá esta API REST.
+Está desarrollado con React y Vite y consume esta API REST.
+
+Incluye:
+
+- Autenticación y rutas protegidas.
+- Dashboard interactivo con indicadores y gráficos.
+- Inventario y detalle de activos.
+- Catálogo y detalle de vulnerabilidades.
+- Gestión completa de Findings.
+- Workflow de asignación, estados y notas.
+- Subida, descarga y eliminación de evidencias según permisos.
+- Administración de usuarios para el rol ADMIN.
+- Roles ADMIN, ANALYST y VIEWER.
+- Internacionalización en español e inglés.
+- Diseño responsive adaptado a escritorio, tablet y móvil.
+- Accesibilidad básica y navegación mediante teclado.
+- Carga diferida de páginas mediante `React.lazy` y `Suspense`.
 
 ## Autor
 
