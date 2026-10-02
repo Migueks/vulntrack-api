@@ -208,6 +208,12 @@ SEED_DEMO_PASSWORD=
 
 `CLIENT_ORIGIN` debe coincidir con el origen autorizado del frontend.
 
+En producción se utiliza:
+
+```dotenv
+CLIENT_ORIGIN=https://vulntrack-web.netlify.app
+```
+
 Las credenciales de Cloudinary permiten gestionar las evidencias privadas.
 
 `SEED_DEMO_PASSWORD` se utiliza exclusivamente al importar los datos de demostración.
@@ -390,6 +396,36 @@ VulnTrack incorpora:
 - Almacenamiento autenticado de evidencias.
 - Variables de entorno excluidas del repositorio.
 
+## Despliegue
+
+El backend está desplegado como **Web Service en Render**, en la región de Frankfurt.
+
+### Servicio
+
+```text
+https://vulntrack-api-5byl.onrender.com
+```
+
+### API REST
+
+```text
+https://vulntrack-api-5byl.onrender.com/api/v1
+```
+
+### Health Check
+
+```text
+https://vulntrack-api-5byl.onrender.com/api/v1/health
+```
+
+### Frontend autorizado
+
+```text
+https://vulntrack-web.netlify.app
+```
+
+El servicio utiliza MongoDB Atlas como base de datos y Cloudinary para las evidencias privadas. La IP Access List de Atlas incluye los rangos de salida necesarios del servicio desplegado en Render.
+
 ## Comandos disponibles
 
 ```bash
@@ -409,13 +445,13 @@ npm audit
 
 ## Estado del proyecto
 
-El backend funcional se encuentra desarrollado y probado manualmente mediante Insomnia.
+El backend se encuentra desarrollado, probado manualmente mediante Insomnia y desplegado en producción mediante Render.
 
 La batería inicial de 14 pruebas unitarias se ha completado correctamente.
 
 La API está integrada con el frontend de VulnTrack y proporciona autenticación, autorización por roles, gestión de usuarios, activos, vulnerabilidades, Findings, evidencias privadas y datos agregados para el Dashboard.
 
-Antes de un despliegue público definitivo se recomienda completar pruebas de integración y concurrencia, revisar los permisos mínimos de Cloudinary y configurar las variables del entorno de producción.
+El entorno de producción utiliza MongoDB Atlas, Cloudinary y variables de entorno gestionadas desde Render. Como mejoras futuras pueden ampliarse las pruebas de integración y concurrencia y revisarse periódicamente los permisos mínimos de los servicios externos.
 
 ## Frontend
 
@@ -425,7 +461,11 @@ El frontend de VulnTrack se encuentra desarrollado en un repositorio independien
 vulntrack-web
 ```
 
-Está desarrollado con React y Vite y consume esta API REST.
+Está desarrollado con React y Vite, consume esta API REST y se encuentra desplegado en:
+
+```text
+https://vulntrack-web.netlify.app
+```
 
 Incluye:
 
@@ -437,6 +477,8 @@ Incluye:
 - Workflow de asignación, estados y notas.
 - Subida, descarga y eliminación de evidencias según permisos.
 - Administración de usuarios para el rol ADMIN.
+- Perfil personal con edición de nombre y correo electrónico.
+- Cambio seguro de contraseña con invalidación de sesión.
 - Roles ADMIN, ANALYST y VIEWER.
 - Internacionalización en español e inglés.
 - Diseño responsive adaptado a escritorio, tablet y móvil.
